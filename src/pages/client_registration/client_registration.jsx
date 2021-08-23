@@ -11,7 +11,7 @@ import ReplayIcon from '@material-ui/icons/Replay';
 import EditIcon from '@material-ui/icons/Edit';
 import CheckBox from "../../components/checkbox/checkBox.component";
 
-export const useStyles = makeStyles((theme) => ({
+ const useStyles = makeStyles((theme) => ({
         logo: {
             width: '90.41px',
             height: '26.64px',

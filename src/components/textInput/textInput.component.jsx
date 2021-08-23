@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) =>
         root: {
             '& > *': {
                 margin: '20px auto',
-                minWidth: '400px',
+                minWidth: '300px',
             },
         },
         [theme.breakpoints.down('xs')]: {
