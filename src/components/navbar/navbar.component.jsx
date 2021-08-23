@@ -1,21 +1,31 @@
 import React from 'react';
-import {NavLink } from 'react-router-dom';
+import {NavLink, useLocation} from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
+import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-// import BuildIcon from '@material-ui/icons/Build';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import DashboardIcon from '@material-ui/icons/Dashboard';
+import SearchBar from "../searchbar/searchbar.component";
+
+import payAttitudeLogo from '../../static/images/palogo.png';
+import notification from '../../static/images/notification.png';
+import msgLog from '../../static/images/msg.png';
+import HomeIcon from '@material-ui/icons/HomeOutlined';
+import userIcon from '../../static/images/users.png';
+import compIcon from '../../static/images/companies.png';
+import programIcon from '../../static/images/programs.png';
+import auditIcon from '../../static/images/auditIcon.png';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+
 
 
 const drawerWidth = 250;
@@ -23,6 +33,9 @@ const drawerWidth = 250;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        MuiListItemIconRoot :{
+
+    },
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -66,14 +79,39 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'none',
         color: 'white',
     },
+    activeLink: {
+        color: '#0C96DE',
+        fontWeight: '500',
+        letterSpacing: 0,
+        lineHeight: '15px',
+        marginLeft: '11px',
+        marginTop: '10px',
+        minHeight: '22px',
+        minWidth: '76px',
+        whiteSpace: 'nowrap',
+
+        borderLeftColor: '#0C96DE',
+    },
     navText: {
-        fontFamily: 'Poppins\', sans-serif',
         fontSize: '1.5rem',
+        color: '#666667',
     },
     iconStyles: {
-        color: 'white',
-        fontSize: '1rem'
-    }
+        color: 'black',
+        fontSize: '1.5rem',
+        opacity: '0.5',
+    },
+    iconStyles2: {
+        width: '18px',
+        height: '18px',
+        opacity: '0.5',
+    },
+    logo: {
+        width: '90.41px',
+        height: '26.64px',
+        marginLeft: '30%',
+        marginTop: '20px',
+    },
 }));
 
 const  DashHeader = (props, children) => {
@@ -82,6 +120,7 @@ const  DashHeader = (props, children) => {
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
+    const pathname = useLocation();
 
 
     const handleDrawerToggle = () => {
@@ -95,41 +134,50 @@ const  DashHeader = (props, children) => {
     const drawer = (
         <div>
             <div className={classes.toolbar}>
-                <div
-                    style={{
-                        width: '90.41px',
-                        height: '26.64px',
-                        background: 'url(\'../../Assets/logo_color.png\')',
-                    }}
-                    />
+                <img className={classes.logo} src={payAttitudeLogo} alt='Payattitude logo'/>
             </div>
+
             <Divider />
             <List component="nav"
                   aria-labelledby="nested-list-subheader">
-                <NavLink className={classes.navLink}  to='/'>
+                <NavLink exact className={classes.navLink}  to='/' activeClassName={classes.activeLink}>
                     <ListItem button>
-                        <ListItemIcon><DashboardIcon className={classes.iconStyles} /></ListItemIcon>
+                        <ListItemIcon><HomeIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Dashboard' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink className={classes.navLink}  to='/'>
+                <NavLink exact className={classes.navLink}  to='/users' activeClassName={classes.activeLink}>
                     <ListItem button>
-                        <ListItemIcon><DashboardIcon className={classes.iconStyles} /></ListItemIcon>
+                        <ListItemIcon><img className={classes.iconStyles2} src={userIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Users' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink className={classes.navLink} to='/'>
+                <NavLink exact className={classes.navLink} to='/companies' activeClassName={classes.activeLink}>
                     <ListItem button>
-                        <ListItemIcon><DashboardIcon className={classes.iconStyles} /></ListItemIcon>
+                        <ListItemIcon><img className={classes.iconStyles2} src={compIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Companies' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-               <NavLink className={classes.navLink} to='/'>
+                <NavLink exact className={classes.navLink} to='/programs' activeClassName={classes.activeLink}>
+                    <ListItem button>
+                        <ListItemIcon><img className={classes.iconStyles2} src={programIcon} alt=''/></ListItemIcon>
+                        <ListItemText primary='Programs' className={classes.navText} />
+                    </ListItem>
+                </NavLink>
+
+                <NavLink exact className={classes.navLink} to='/registrations' activeClassName={classes.activeLink}>
+                    <ListItem button>
+                        <ListItemIcon><InfoOutlinedIcon className={classes.iconStyles} /></ListItemIcon>
+                        <ListItemText primary='Registration' className={classes.navText} />
+                    </ListItem>
+                </NavLink>
+
+               <NavLink exact className={classes.navLink} to='/' activeClassName={classes.activeLink}>
                    <ListItem button>
-                       <ListItemIcon><DashboardIcon className={classes.iconStyles} /></ListItemIcon>
+                       <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                        <ListItemText primary='Audit Trail' className={classes.navText} />
                    </ListItem>
                </NavLink>
@@ -151,13 +199,24 @@ const  DashHeader = (props, children) => {
                         onClick={handleDrawerToggle}
                         className={classes.menuButton}
                     >
-                        {/* Should hold the  nav brand */}
                         <MenuIcon />
+
+
+                    {/* Should hold the  nav brand */}
+
                     </IconButton>
-                    {/*<Typography variant="h6" noWrap>*/}
-                    {/*   */}
-                    {/*</Typography>*/}
+                    <SearchBar />
+                    <Grid style={{
+                        display: 'flex',
+                        alignItems: 'end',
+                        justifyContent: 'space-between',
+                        marginRight: 0,
+                    }}>
+                       <div></div>
+                       <div></div>
+                    </Grid>
                 </Toolbar>
+
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
