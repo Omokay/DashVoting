@@ -29,7 +29,7 @@ import CheckBox from "../../components/checkbox/checkBox.component";
                 paddingLeft: '15px',
                 paddingRight: '15px',
             },
-            backgroundColor: '#f4f5f6',
+            backgroundColor: '#dde0e3',
             borderRadius: '5px',
             padding:  'auto 15px',
             fontSize: '12px',
@@ -114,7 +114,7 @@ const ClientRegistration = () => {
 
 
     const [showStatement, setStatement] = useState(true);
-    const [viewToDisplay,  setView] = useState(4);
+    const [viewToDisplay,  setView] = useState(2);
     /**
      * Initialise state
      * */
@@ -347,7 +347,7 @@ const ClientRegistration = () => {
                                              fontSize: '12px',
                                          }}>Confirm phone number with code from sms message</p></>
                                      <div className={classes.noMarg}>
-                                         <CustomButton className={classes.noMarg} name='Send code' handleButton='' width='160px'/>
+                                         <CustomButton className={classes.noMarg} name='Confirm code' handleButton='' width='160px'/>
                                      </div>
                                  </div>
                              )   :
