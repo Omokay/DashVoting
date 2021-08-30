@@ -25,6 +25,10 @@ import compIcon from '../../static/images/companies.png';
 import programIcon from '../../static/images/programs.png';
 import auditIcon from '../../static/images/auditIcon.png';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import avatar from '../../static/images/avatar.png';
+import ImageAvatars from "../avatar/avatar.component";
+import dropdown from '../../static/images/dropdown.png';
 
 
 
@@ -60,6 +64,19 @@ const useStyles = makeStyles((theme) => ({
     },
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
+    toolbarContent: {
+        width: '95%',
+        height: '62px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        [theme.breakpoints.down('sm')]: {
+            width: '85%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '69%',
+        },
+    },
+
     drawerPaper: {
         width: drawerWidth,
         backgroundColor: '#fff',
@@ -111,6 +128,53 @@ const useStyles = makeStyles((theme) => ({
         height: '26.64px',
         marginLeft: '30%',
         marginTop: '20px',
+    },
+    logoConfig: {
+        width: '70px',
+        height: '100%',
+        padding: '10px',
+        borderRightStyle:  'inset',
+        borderRightColor: '#e0e0e0',
+        borderLeftStyle:  'solid',
+        borderLeftColor: '#e0e0e0',
+        borderWidth: '1px',
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        },
+    },
+    logoConfig2: {
+        width: '70px',
+        height: '100%',
+        padding: '10px',
+        borderRightStyle:  'solid',
+        borderRightColor: '#e0e0e0',
+        borderWidth: '1px',
+        [theme.breakpoints.down("sm")]: {
+            display: "none"
+        },
+    },
+    toolbarImage: {
+        width: '22px',
+        height: '22px',
+        display:  'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '8px',
+    },
+    avatarDiv: {
+        width: '70px',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+    centerDiv: {
+        display: 'block',
+        margin: 'auto',
+        padding: '5px',
+    },
+    dropdown: {
+      width: '15px',
+      height: '10px',
     },
 }));
 
@@ -182,6 +246,7 @@ const  DashHeader = (props, children) => {
                    </ListItem>
                </NavLink>
             </List>
+
         </div>
     );
 
@@ -205,16 +270,34 @@ const  DashHeader = (props, children) => {
                     {/* Should hold the  nav brand */}
 
                     </IconButton>
-                    <SearchBar />
-                    <Grid style={{
-                        display: 'flex',
-                        alignItems: 'end',
-                        justifyContent: 'space-between',
-                        marginRight: 0,
-                    }}>
-                       <div></div>
-                       <div></div>
-                    </Grid>
+                    <div className={classes.toolbarContent}>
+                        <SearchBar />
+
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                        }}>
+                            <div className={classes.logoConfig}>
+                                <img className={classes.toolbarImage} src={notification} alt='img'/>
+                            </div>
+
+                            <div className={classes.logoConfig2}>
+                                <img className={classes.toolbarImage} src={msgLog} alt='img'/>
+                            </div>
+
+                            <div className={classes.avatarDiv}>
+                                <ImageAvatars avatar={avatar} />
+                                <p className={classes.centerDiv} style={{
+                                    fontSize:  '14px',
+                                    color: '#0C96DE',
+                                    fontWeight: 'bold',
+                                }}>Prince</p>
+                                <div className={classes.centerDiv}>
+                                    <img className={classes.dropdown} src={dropdown} alt='dropdown'/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </Toolbar>
 
             </AppBar>

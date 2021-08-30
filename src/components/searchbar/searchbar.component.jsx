@@ -5,7 +5,15 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '400px',
+        width: '600px',
+        padding: '7px 0',
+        [theme.breakpoints.down('md')]: {
+            width: '400px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '300px',
+        },
+
     },
     search: {
         position: 'relative',
@@ -14,17 +22,17 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: '#e8e8e9',
         },
-        [theme.breakpoints.down("xs")]: {
-            display: "none"
-        },
         marginLeft: 0,
         width: '100%',
         height: '48px',
-        [theme.breakpoints.up('sm')]: {
-            width: '100%',
-            '&:focus': {
-                width: '100%',
-            },
+        // [theme.breakpoints.up('sm')]: {
+        //     width: '100%',
+        //     '&:focus': {
+        //         width: '100%',
+        //     },
+        // },
+        [theme.breakpoints.down("xs")]: {
+            display: "none"
         },
     },
     searchIcon: {
