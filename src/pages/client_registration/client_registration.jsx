@@ -114,7 +114,7 @@ const ClientRegistration = () => {
 
 
     const [showStatement, setStatement] = useState(true);
-    const [viewToDisplay,  setView] = useState(2);
+    const [viewToDisplay,  setView] = useState(5);
     /**
      * Initialise state
      * */

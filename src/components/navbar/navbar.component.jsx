@@ -25,7 +25,7 @@ import compIcon from '../../static/images/companies.png';
 import programIcon from '../../static/images/programs.png';
 import auditIcon from '../../static/images/auditIcon.png';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+
 import avatar from '../../static/images/avatar.png';
 import ImageAvatars from "../avatar/avatar.component";
 import dropdown from '../../static/images/dropdown.png';
@@ -37,9 +37,13 @@ const drawerWidth = 250;
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+
         MuiListItemIconRoot :{
 
     },
+        a: {
+            textDecoration: 'none',
+        },
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -85,33 +89,35 @@ const useStyles = makeStyles((theme) => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
-        backgroundColor: '#ccc',
+        backgroundColor: '#F5F6F9',
         minHeight: '100vh',
     },
     nested: {
         paddingLeft: theme.spacing(4),
 
     },
-    navLink: {
+    navlink: {
+        width: 'inherit',
+        height: 'auto',
         textDecoration: 'none',
-        color: 'white',
+        color: 'black',
     },
+
+
     activeLink: {
         color: '#0C96DE',
-        fontWeight: '500',
-        letterSpacing: 0,
-        lineHeight: '15px',
-        marginLeft: '11px',
-        marginTop: '10px',
-        minHeight: '22px',
-        minWidth: '76px',
-        whiteSpace: 'nowrap',
-
-        borderLeftColor: '#0C96DE',
+        fontSize: '50px',
     },
+
+    listItem: {
+        borderColor: '#000',
+    },
+
+
     navText: {
         fontSize: '1.5rem',
         color: '#666667',
+
     },
     iconStyles: {
         color: 'black',
@@ -124,8 +130,8 @@ const useStyles = makeStyles((theme) => ({
         opacity: '0.5',
     },
     logo: {
-        width: '90.41px',
-        height: '26.64px',
+        width: '126',
+        height: '35px',
         marginLeft: '30%',
         marginTop: '20px',
     },
@@ -204,42 +210,42 @@ const  DashHeader = (props, children) => {
             <Divider />
             <List component="nav"
                   aria-labelledby="nested-list-subheader">
-                <NavLink exact className={classes.navLink}  to='/' activeClassName={classes.activeLink}>
-                    <ListItem button>
+                <NavLink style={{textDecoration: 'none', borderColor: '#000',}} exact className={classes.navlink}  to='/' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.listItem} style={{textDecoration: 'none',}} button>
                         <ListItemIcon><HomeIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Dashboard' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink exact className={classes.navLink}  to='/users' activeClassName={classes.activeLink}>
-                    <ListItem button>
+                <NavLink style={{textDecoration: 'none',}} className={classes.navlink}  to='/users' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
                         <ListItemIcon><img className={classes.iconStyles2} src={userIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Users' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink exact className={classes.navLink} to='/companies' activeClassName={classes.activeLink}>
+                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/companies' activeClassName={classes.activeLink}>
                     <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={compIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Companies' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink exact className={classes.navLink} to='/programs' activeClassName={classes.activeLink}>
+                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/programs' activeClassName={classes.activeLink}>
                     <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={programIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Programs' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink exact className={classes.navLink} to='/registrations' activeClassName={classes.activeLink}>
+                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/registrations' activeClassName={classes.activeLink}>
                     <ListItem button>
                         <ListItemIcon><InfoOutlinedIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Registration' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-               <NavLink exact className={classes.navLink} to='/' activeClassName={classes.activeLink}>
+               <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/' activeClassName={classes.activeLink}>
                    <ListItem button>
                        <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                        <ListItemText primary='Audit Trail' className={classes.navText} />

@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '600px',
+        width: '500px',
         padding: '7px 0',
         [theme.breakpoints.down('md')]: {
             width: '400px',
@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
     search: {
         position: 'relative',
         borderRadius: '5px',
-        backgroundColor: '#ebedef',
+        backgroundColor: '#F5F6F9',
         '&:hover': {
-            backgroundColor: '#e8e8e9',
+            backgroundColor: '#f3f5fc',
         },
         marginLeft: 0,
         width: '100%',

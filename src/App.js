@@ -4,6 +4,12 @@ import {UserContext} from "./context/user_context";
 import {VotingContext} from "./context/voting_context";
 import DashboardPA from "./pages/Dashbaord_PA/dashboard.page";
 import ClientRegistration from "./pages/client_registration/client_registration";
+
+import Companies from "./pages/companies/companies.pages";
+import Users from './pages/users/users.pages';
+import Programs from './pages/programs/programs.pages';
+import AuditTrail from './pages/auditTrails/audit.pages';
+
 import {createMuiTheme,
         Theme,
         ThemeProvider
@@ -12,6 +18,8 @@ import blue from '@material-ui/core/colors/blue';
 
 import Avenir from './static/fonts/Avenir.ttc';
 import {CssBaseline} from "@material-ui/core";
+
+import './App.css';
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -62,7 +70,12 @@ function App() {
               <CssBaseline>
                   <div className="App">
                       <Route exact path='/registration'><ClientRegistration /></Route>
-                      <Route exact path ='/dashboard'><DashboardPA/></Route>
+                      <Route exact path ='/'><DashboardPA/></Route>
+                      <Route exact path='/users'><Users /></Route>
+                      <Route exact path='/companies'><Companies /></Route>
+                      <Route exact path='/programs'><Programs /></Route>
+                      <Route exact path='auditTrail'><AuditTrail /></Route>
+                      <Route exact path='/registrations'><ClientRegistration /></Route>
                   </div>
               </CssBaseline>
            </ThemeProvider>
