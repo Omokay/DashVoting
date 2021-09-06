@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
        height: '335px',
        background: '#FFFFFF',
        padding:  '20px',
+       margin: '20px 0',
      },
     wrapper: {
          width: '100%',
@@ -106,14 +107,15 @@ const CompanySummary = () => {
                         height: 'auto',
                         background: '#F5F6F9',
                         borderRadius: '4px',
+                        overflow: 'scroll',
                         border: 'none',
                     }} className='row'>
-                        <div className='col-md-1 text-left' >#</div>
-                        <div className='col-md-2 text-left'>Program</div>
-                        <div className='col-md-2 text-left'>Contact Person</div>
-                        <div className='col-md-3 text-left'>Email Address</div>
-                        <div className='col-md-2 text-left'>Phone Number</div>
-                        <div className='col-md-2 text-left'>Reg Date</div>
+                        <div className='col-md-1 col-xs-1 text-left' >#</div>
+                        <div className='col-md-2 col-xs-2  text-left'>Program</div>
+                        <div className='col-md-2 col-xs-2 text-left'>Contact Person</div>
+                        <div className='col-md-3 col-xs-3 text-left'>Email Address</div>
+                        <div className='col-md-2 col-xs-2 text-left'>Phone Number</div>
+                        <div className='col-md-2 col-xs-2 text-left'>Reg Date</div>
                     </div>
                     </thead>
 

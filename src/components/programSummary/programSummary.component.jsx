@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         height: '335px',
         background: '#FFFFFF',
         padding:  '20px',
-        margin: '20px 10px',
+        margin: '20px 0',
     },
     wrapper: {
         width: '100%',
@@ -125,7 +125,7 @@ const ProgramSummary = () => {
                         <div className={classes.br}/>
 
                         <div style={{
-                            height: '50px',
+                            height: 'auto',
                             padding: '10px 20px',
                             border: '1px solid #F3F3F3',
                             borderRadius: '4px',

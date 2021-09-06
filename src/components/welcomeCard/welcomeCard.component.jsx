@@ -10,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
      },
     mainWrapper: {
         marginTop: '30px',
-        width: '70%',
-        minWidth: '729px',
+        width: '100%',
         height: 'auto',
         background: '#FFFFFF',
         borderRadius: '4px',
@@ -38,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     },
     svgWrapper: {
         position: 'absolute',
-        top: '90px',
-        left: '55%',
+        top: '10px',
+        left: '73%',
         width: '262px',
         height: '225px',
         zIndex: 5,

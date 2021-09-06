@@ -13,7 +13,13 @@ const useStyles =  makeStyles(() => ({
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-    }
+    },
+    left: {
+
+    },
+    right: {
+
+    },
 }));
 
 
@@ -23,13 +29,25 @@ const DashboardPA = () => {
     return (
         <>
           <DashHeader>
-                <div className={classes.root}>
-                    <WelcomeCard />
-                    <StatCard />
-                    <Activities />
-                    <CompanySummary />
-                    <ProgramSummary />
-                </div>
+                {/*<div className={classes.root}>*/}
+                {/*    <WelcomeCard />*/}
+                {/*    <StatCard />*/}
+                {/*    <Activities />*/}
+                {/*    <CompanySummary />*/}
+                {/*    <ProgramSummary />*/}
+                {/*</div>*/}
+
+              <div className='row'>
+                  <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12'>
+                     <WelcomeCard />
+                     <CompanySummary />
+                     <ProgramSummary />
+                  </div>
+                  <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12'>
+                     <StatCard />
+                     <Activities />
+                  </div>
+              </div>
           </DashHeader>
         </>
     )

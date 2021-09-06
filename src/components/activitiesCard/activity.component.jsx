@@ -15,9 +15,9 @@ const useStyles = makeStyles (() => ({
         // backgroundColor: theme.palette.background.paper,
     },
     wrapper: {
-        width: '400px',
+        width: '328px',
         height: '400px',
-        padding: '20px',
+        padding: '20px 10px',
         background: '#FFFFFF',
         borderRadius: '4px',
         opacity: 1,
@@ -25,7 +25,7 @@ const useStyles = makeStyles (() => ({
     },
     root: {
         margin: '0 auto',
-        width: '378px',
+        width: '100%',
         height: '326px',
         overflow: 'auto',
     },
