@@ -4,6 +4,7 @@ import WelcomeCard from "../../components/welcomeCard/welcomeCard.component";
 import StatCard from "../../components/statsCard/stats.component";
 import {makeStyles} from "@material-ui/core/styles";
 import Activities from "../../components/activitiesCard/activity.component";
+import CompanySummary from "../../components/companiesSummaryTable/companySummary.component";
 
 
 const useStyles =  makeStyles(() => ({
@@ -25,6 +26,7 @@ const DashboardPA = () => {
                     <WelcomeCard />
                     <StatCard />
                     <Activities />
+                    <CompanySummary />
                 </div>
           </DashHeader>
         </>

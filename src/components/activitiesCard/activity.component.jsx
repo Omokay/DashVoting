@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import Divider from '@material-ui/core/Divider';
-import { createStyles, Theme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -36,6 +35,7 @@ const useStyles = makeStyles (() => ({
         color: '#222222',
         fontSize:  '20px',
         fontWeight: '900',
+        paddingLeft: '20px',
         opacity: 1,
     }
 }));
@@ -56,7 +56,7 @@ const Activities = () => {
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText primary="Francis Tran" secondary="Created a new user" />
-                                <ListItemText primary="Sep 7, 2021"/>
+                                <ListItemText primary="14-08-2021"/>
                                 <Divider />
                             </ListItem>
                         ))
