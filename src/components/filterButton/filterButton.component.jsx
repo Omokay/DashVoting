@@ -53,7 +53,7 @@ const FilterButton = ({options}) => {
                     id="simple-menu"
                     anchorEl={anchorEl}
                     getContentAnchorEl={null}
-                    elevation={1}
+                    elevation={0}
                     keepMounted
                     anchorOrigin={{ vertical: 'bottom', horizontal: 'top' }}
                     open={Boolean(anchorEl)}

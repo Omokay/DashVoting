@@ -29,6 +29,9 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import avatar from '../../static/images/avatar.png';
 import ImageAvatars from "../avatar/avatar.component";
 import dropdown from '../../static/images/dropdown.png';
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 
 
@@ -181,6 +184,9 @@ const useStyles = makeStyles((theme) => ({
     dropdown: {
       width: '15px',
       height: '10px',
+      '&:hover': {
+          cursor: 'pointer',
+      }
     },
 }));
 
@@ -190,6 +196,7 @@ const  DashHeader = (props, children) => {
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
+    const [anchorEl, setAnchor] = React.useState(null);
     const pathname = useLocation();
 
 
@@ -200,6 +207,19 @@ const  DashHeader = (props, children) => {
     const handleClick = () => {
         setOpen(!open);
     };
+
+    const handleDropdown = (event) => {
+       setAnchor(event.currentTarget)
+    }
+
+    const handleClose = () => {
+        setAnchor(null);
+    }
+
+    const handleLogout = () => {
+        setAnchor(null);
+    }
+
 
     const drawer = (
         <div>
@@ -290,7 +310,8 @@ const  DashHeader = (props, children) => {
                             <div className={classes.logoConfig2}>
                                 <img className={classes.toolbarImage} src={msgLog} alt='img'/>
                             </div>
-
+                            {/* Menu @ profile for logging out*/}
+                            <ClickAwayListener onClickAway={handleClose}>
                             <div className={classes.avatarDiv}>
                                 <ImageAvatars avatar={avatar} />
                                 <p className={classes.centerDiv} style={{
@@ -298,10 +319,23 @@ const  DashHeader = (props, children) => {
                                     color: '#0C96DE',
                                     fontWeight: 'bold',
                                 }}>Prince</p>
-                                <div className={classes.centerDiv}>
+                                <div onClick={handleDropdown} className={classes.centerDiv}>
                                     <img className={classes.dropdown} src={dropdown} alt='dropdown'/>
                                 </div>
+                                <Menu
+                                    id="simple-menu"
+                                    anchorEl={anchorEl}
+                                    getContentAnchorEl={null}
+                                    elevation={0}
+                                    keepMounted
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'top' }}
+                                    open={Boolean(anchorEl)}
+                                    onClose={handleClose}
+                                >
+                                    <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                                </Menu>
                             </div>
+                            </ClickAwayListener>
                         </div>
                     </div>
                 </Toolbar>
