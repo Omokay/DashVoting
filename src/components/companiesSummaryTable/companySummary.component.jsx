@@ -1,5 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
+import FilterButton from "../filterButton/filterButton.component";
 
 const useStyles = makeStyles((theme) => ({
      root: {
@@ -26,14 +27,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bolder',
         padding: '10px 20px',
         opacity: 1,
-    },
-    filterButton: {
-        width: '118px',
-        height: '40px',
-        border: '0.8px solid #E1E1E1',
-        borderRadius: '4px',
-        opacity: '1',
-        right: '10px',
     },
     table: {
          margin: '20px 0',
@@ -87,7 +80,7 @@ const CompanySummary = () => {
         <div  className={classes.root}>
             <div className={classes.headerDiv}>
                 <h1 className={classes.header}>Company Summary</h1>
-                <div className={classes.filterButton}/>
+                <FilterButton options={['Default', 'Ascending', 'Descending']}/>
             </div>
             <div className={classes.wrapper}>
 
@@ -110,12 +103,12 @@ const CompanySummary = () => {
                         overflow: 'scroll',
                         border: 'none',
                     }} className='row'>
-                        <div className='col-md-1 col-xs-1 text-left' >#</div>
-                        <div className='col-md-2 col-xs-2  text-left'>Program</div>
-                        <div className='col-md-2 col-xs-2 text-left'>Contact Person</div>
-                        <div className='col-md-3 col-xs-3 text-left'>Email Address</div>
-                        <div className='col-md-2 col-xs-2 text-left'>Phone Number</div>
-                        <div className='col-md-2 col-xs-2 text-left'>Reg Date</div>
+                        <div className='col-md-1 col-sm-1 col-xs-1 text-left' >#</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2  text-left'>Program</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Contact Person</div>
+                        <div className='col-md-3 col-sm-3 col-xs-3 text-left'>Email Address</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Phone Number</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Reg Date</div>
                     </div>
                     </thead>
 
@@ -132,12 +125,12 @@ const CompanySummary = () => {
                         width: '100%',
                         margin: '0 auto',
                     }} className='row'>
-                        <div className='col-md-1 text-left'>A012</div>
-                        <div className='col-md-2 text-left'>Payattitude</div>
-                        <div className='col-md-2 text-left'>Omoke Chuku</div>
-                        <div className='col-md-3 text-left'>info@email.com</div>
-                        <div className='col-md-2 text-left'>08105470291</div>
-                        <div className='col-md-2 text-left'>16-08-2021</div>
+                        <div className='col-md-1 col-sm-1 col-xs-1 text-left'>A012</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Payattitude</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Omoke Chuku</div>
+                        <div className='col-md-3 col-sm-3 col-xs-3 text-left'>info@email.com</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>08105470291</div>
+                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>16-08-2021</div>
                     </div>
 
                     <div className={classes.br}/>

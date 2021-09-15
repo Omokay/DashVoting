@@ -1,7 +1,7 @@
 import React  from 'react';
 import {BrowserRouter as Router, Route} from  'react-router-dom';
-import {UserContext} from "./context/user_context";
-import {VotingContext} from "./context/voting_context";
+// import {UserContext} from "./context/user_context";
+// import {VotingContext} from "./context/voting_context";
 import DashboardPA from "./pages/Dashbaord_PA/dashboard.page";
 import ClientRegistration from "./pages/client_registration/client_registration";
 

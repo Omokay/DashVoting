@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import Avatars from '../../components/avatarGroup/avatarGroup.component';
+import FilterButton from "../filterButton/filterButton.component";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,14 +28,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bolder',
         padding: '10px 20px',
         opacity: 1,
-    },
-    filterButton: {
-        width: '118px',
-        height: '40px',
-        border: '0.8px solid #E1E1E1',
-        borderRadius: '4px',
-        opacity: '1',
-        right: '10px',
     },
     table: {
         margin: '20px 0',
@@ -89,7 +82,7 @@ const ProgramSummary = () => {
             <div className={classes.root}>
                 <div className={classes.headerDiv}>
                     <h1 className={classes.header}>Program Summary</h1>
-                    <div className={classes.filterButton}/>
+                    <FilterButton options={['Default', 'Ascending', 'Descending']}/>
                 </div>
                 <div className={classes.wrapper}>
 
