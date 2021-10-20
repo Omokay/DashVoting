@@ -5,11 +5,21 @@ import FilterButton from "../filterButton/filterButton.component";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        minWidth: '71%',
+        width: '100%',
+        minWidth: '600px',
         height: '335px',
         background: '#FFFFFF',
         padding:  '20px',
         margin: '20px 0',
+        transition: '1s ease',
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+            minWidth: '520px',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            minWidth: '600px',
+        },
     },
     wrapper: {
         width: '100%',
@@ -103,13 +113,15 @@ const ProgramSummary = () => {
                             background: '#F5F6F9',
                             borderRadius: '4px',
                             border: 'none',
-                        }} className='row'>
-                            <div className='col-md-1 text-left' >#</div>
-                            <div className='col-md-2 text-left'>Program</div>
-                            <div className='col-md-2 text-left'>Options</div>
-                            <div className='col-md-3 text-left'>Voting Period</div>
-                            <div className='col-md-2 text-left'>Voting Cost</div>
-                            <div className='col-md-2 text-left'>Status</div>
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                        }}>
+                            <div style={{margin: '0 5px'}} >#</div>
+                            <div style={{margin: '0 5px'}}>Program</div>
+                            <div style={{margin: '0 5px'}}>Options</div>
+                            <div style={{margin: '0 5px'}}>Voting Period</div>
+                            <div style={{margin: '0 5px'}}>Voting Cost</div>
+                            <div style={{margin: '0 5px'}}>Status</div>
                         </div>
                         </thead>
 
@@ -125,55 +137,43 @@ const ProgramSummary = () => {
                             opacity: 1,
                             width: '100%',
                             margin: '0 auto',
-                        }} className='row'>
-                            <div className='col-md-1 text-left'>A012</div>
-                            <div className='col-md-2 text-left'>Amazon Website</div>
-                            <div className='col-md-2 text-left'>
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                        }}>
+                            <div style={{margin: '0 5px'}}>A012</div>
+                            <div style={{margin: '0 5px'}}>Amazon Website</div>
+                            <div style={{margin: '0 5px'}}>
                                 <Avatars />
                             </div>
-                            <div className='col-md-3 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
+                            <div style={{margin: '0 5px'}}></div>
+                            <div style={{margin: '0 5px'}}></div>
+                            <div style={{margin: '0 5px'}}></div>
                         </div>
 
                         <div className={classes.br}/>
 
-
                         <div style={{
-                            height: '50px',
+                            height: 'auto',
                             padding: '10px 20px',
                             border: '1px solid #F3F3F3',
                             borderRadius: '4px',
                             opacity: 1,
                             width: '100%',
                             margin: '0 auto',
-                        }} className='row'>
-                            <div className='col-md-1 text-left'>A012</div>
-                            <div className='col-md-2 text-left'>Amazon Website</div>
-                            <div className='col-md-2 text-left'></div>
-                            <div className='col-md-3 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                        }}>
+                            <div style={{margin: '0 5px'}}>A012</div>
+                            <div style={{margin: '0 5px'}}>Amazon Website</div>
+                            <div style={{margin: '0 5px'}}>
+                                <Avatars />
+                            </div>
+                            <div style={{margin: '0 5px'}}></div>
+                            <div style={{margin: '0 5px'}}></div>
+                            <div style={{margin: '0 5px'}}></div>
                         </div>
 
                         <div className={classes.br}/>
-
-                        <div style={{
-                            height: '50px',
-                            padding: '10px 20px',
-                            border: '1px solid #F3F3F3',
-                            borderRadius: '4px',
-                            opacity: 1,
-                            width: '100%',
-                            margin: '0 auto',
-                        }} className='row'>
-                            <div className='col-md-1 text-left'>A012</div>
-                            <div className='col-md-2 text-left'>Amazon Website</div>
-                            <div className='col-md-2 text-left'></div>
-                            <div className='col-md-3 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
-                            <div className='col-md-2 text-left'></div>
-                        </div>
 
                         </tbody>
                     </table>

@@ -7,13 +7,20 @@ const useStyles = makeStyles( (theme) => ({
     },
     row: {
         padding: '10px',
-        width: '328px',
+        minWidth: '328px',
         height: '100px',
         background: '#FFFFFF',
         borderRadius: '4px',
         opacity: 1,
         display: 'flex',
         justifyContent: 'space-between',
+
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+            height: '100px',
+            padding: '10px',
+        },
+
     },
     columns: {
         margin: 'auto auto',
@@ -56,7 +63,7 @@ const StatCard = () => {
                   borderLeftWidth: '2px',
                   borderLeftColor: '#F5F6F9',
                   borderLeftStyle: 'solid',
-
+                  padding: '10px',
                   borderRightWidth: '2px',
                   borderRightColor: '#F5F6F9',
                   borderRightStyle: 'solid'

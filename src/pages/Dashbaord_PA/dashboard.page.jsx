@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import Activities from "../../components/activitiesCard/activity.component";
 import CompanySummary from "../../components/companiesSummaryTable/companySummary.component";
 import ProgramSummary from "../../components/programSummary/programSummary.component";
+import Feeds from "../../components/feedsCard/feeds.component";
 
 
 const useStyles =  makeStyles(() => ({
@@ -38,15 +39,16 @@ const DashboardPA = () => {
                 {/*</div>*/}
 
               <div className='row'>
-                  <div className='col-lg-9 col-md-8 col-sm-12 col-xs-12'>
+                  <div className='col-lg-9 col-md-12 col-sm-12 col-xs-12'>
                      <WelcomeCard />
                      <CompanySummary />
                      <ProgramSummary />
 
                   </div>
-                  <div className='col-lg-3 col-md-4 col-sm-12 col-xs-12'>
+                  <div className='col-lg-3 col-md-12 col-sm-12 col-xs-12'>
                      <StatCard />
                      <Activities />
+                     <Feeds />
                   </div>
               </div>
           </DashHeader>

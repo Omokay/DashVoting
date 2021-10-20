@@ -4,11 +4,21 @@ import FilterButton from "../filterButton/filterButton.component";
 
 const useStyles = makeStyles((theme) => ({
      root: {
-       minWidth: '71%',
+       width: '100%',
+       minWidth: '600px',
        height: '335px',
        background: '#FFFFFF',
        padding:  '20px',
        margin: '20px 0',
+         transition: '1s ease',
+         [theme.breakpoints.down('md')]: {
+             width: '100%',
+             minWidth: '520px',
+         },
+         [theme.breakpoints.down('sm')]: {
+             width: '100%',
+             minWidth: '600px',
+         },
      },
     wrapper: {
          width: '100%',
@@ -72,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
     br: {
          height: '3px',
         display: 'hidden',
+    },
+    colRow: {
+         overflow: 'hidden',
     }
 }));
 const CompanySummary = () => {
@@ -102,13 +115,15 @@ const CompanySummary = () => {
                         borderRadius: '4px',
                         overflow: 'scroll',
                         border: 'none',
-                    }} className='row'>
-                        <div className='col-md-1 col-sm-1 col-xs-1 text-left' >#</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2  text-left'>Program</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Contact Person</div>
-                        <div className='col-md-3 col-sm-3 col-xs-3 text-left'>Email Address</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Phone Number</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Reg Date</div>
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                    }}>
+                        <div style={{margin: '0 5px'}}>#</div>
+                        <div style={{margin: '0 5px'}}>Program</div>
+                        <div style={{margin: '0 5px'}}>Contact Person</div>
+                        <div style={{margin: '0 5px'}}>Email Address</div>
+                        <div style={{margin: '0 5px'}}>Phone Number</div>
+                        <div style={{margin: '0 5px'}}>Reg Date</div>
                     </div>
                     </thead>
 
@@ -124,33 +139,16 @@ const CompanySummary = () => {
                         opacity: 1,
                         width: '100%',
                         margin: '0 auto',
-                    }} className='row'>
-                        <div className='col-md-1 col-sm-1 col-xs-1 text-left'>A012</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Payattitude</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>Omoke Chuku</div>
-                        <div className='col-md-3 col-sm-3 col-xs-3 text-left'>info@email.com</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>08105470291</div>
-                        <div className='col-md-2 col-sm-2 col-xs-2 text-left'>16-08-2021</div>
-                    </div>
+                        display: 'flex',
+                        justifyContent: 'space-between',
 
-                    <div className={classes.br}/>
-
-
-                    <div style={{
-                        height: '50px',
-                        padding: '10px 20px',
-                        border: '1px solid #F3F3F3',
-                        borderRadius: '4px',
-                        opacity: 1,
-                        width: '100%',
-                        margin: '0 auto',
-                    }} className='row'>
-                        <div className='col-md-1 text-left'>A012</div>
-                        <div className='col-md-2 text-left'>Payattitude</div>
-                        <div className='col-md-2 text-left'>Omoke Chuku</div>
-                        <div className='col-md-3 text-left'>info@email.com</div>
-                        <div className='col-md-2 text-left'>08105470291</div>
-                        <div className='col-md-2 text-left'>16-08-2021</div>
+                    }}>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>A012</div>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>Payattitude</div>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>Omoke Chuku</div>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>info@email.com</div>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>08105470291</div>
+                        <div style={{textOverflow: 'ellipsis', margin: '0 5px',}}>16-08-2021</div>
                     </div>
 
                     <div className={classes.br}/>
@@ -163,14 +161,20 @@ const CompanySummary = () => {
                         opacity: 1,
                         width: '100%',
                         margin: '0 auto',
-                    }} className='row'>
-                        <div className='col-md-1 text-left'>A012</div>
-                        <div className='col-md-2 text-left'>Payattitude</div>
-                        <div className='col-md-2 text-left'>Omoke Chuku</div>
-                        <div className='col-md-3 text-left'>info@email.com</div>
-                        <div className='col-md-2 text-left'>08105470291</div>
-                        <div className='col-md-2 text-left'>16-08-2021</div>
+                        display: 'flex',
+                        justifyContent: 'space-between',
+
+                    }}>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>A012</div>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>Payattitude</div>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>Omoke Chuku</div>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>info@email.com</div>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>08105470291</div>
+                        <div style={{overflow: 'ellipsis', margin: '0 5px',}}>16-08-2021</div>
                     </div>
+
+                    <div className={classes.br}/>
+
 
                     </tbody>
                 </table>

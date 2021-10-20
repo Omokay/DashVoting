@@ -7,21 +7,30 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
-const useStyles = makeStyles (() => ({
+const useStyles = makeStyles ((theme) => ({
     listMain: {
         width: '100%',
         maxWidth: 360,
         overflow: 'auto',
+        padding: '8px',
         // backgroundColor: theme.palette.background.paper,
     },
     wrapper: {
-        width: '328px',
+        minWidth: '328px',
         height: '400px',
         padding: '20px 10px',
         background: '#FFFFFF',
         borderRadius: '4px',
         opacity: 1,
         margin: '20px  0',
+
+
+        [theme.breakpoints.down('md')]: {
+            width: '100%',
+            height: '400px',
+            padding: '20px 10px',
+            margin: '20px  0',
+        },
     },
     root: {
         margin: '0 auto',
@@ -37,6 +46,12 @@ const useStyles = makeStyles (() => ({
         fontWeight: '900',
         paddingLeft: '20px',
         opacity: 1,
+    },
+    listItem: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '8px 0',
     }
 }));
 const Activities = () => {
@@ -49,7 +64,7 @@ const Activities = () => {
                 <List style={{overflow: 'scroll',}} className={classes.listMain}>
                     {
                         arr.map((index, item) => (
-                            <ListItem key={index}>
+                            <ListItem key={index} className={classes.listItem}>
                                 <ListItemAvatar>
                                     <Avatar>
                                         <Avatar />

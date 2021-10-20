@@ -16,19 +16,12 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '4px',
         boxShadow: '0px 3px 6px #272D3B33',
         opacity: 1,
-        marginRight: '20px',
-        // [theme.breakpoints.down('xs')]: {
-        //     width: '550px',
-        //     transition: 'width 1s linear 1s',
-        // },
-        // [theme.breakpoints.down('sm')]: {
-        //     width: '702px',
-        //     transition: 'width 1s linear 1s',
-        // },
-        // [theme.breakpoints.up('md')]: {
-        //     width: '890px',
-        //     transition: 'width 1s linear 1s',
-        // },
+        display: 'flex',
+        justifyContent: 'space-between',
+        [theme.breakpoints.down('xs')]: {
+            width: '600px',
+            transition: 'width 1s linear 1s',
+        },
 
     },
     mainContent: {
@@ -36,37 +29,17 @@ const useStyles = makeStyles((theme) => ({
          padding:  '20px 40px',
     },
     svgWrapper: {
-        position: 'absolute',
-        top: '10px',
-        left: '73%',
-        width: '262px',
-        height: '225px',
-        zIndex: 5,
-        opacity: 1,
+         width: '252px',
+         height: '215px',
+         marginTop: '-20px',
+         marginLeft: '-20px',
+         zIndex: 5,
+         opacity: 1,
         [theme.breakpoints.down('md')]: {
-            left: '780px',
             width: '200px',
             height: '170px',
-            transition: '1s ease',
         },
-        // [theme.breakpoints.up('md')]: {
-        //     left: '750px',
-        //     width: '200px',
-        //     height: '170px',
-        //     transition: '1s ease',
-        // },
-        [theme.breakpoints.down('sm')]: {
-            left: '750px',
-            width: '200px',
-            height: '170px',
-            transition: '1s ease',
-        },
-        [theme.breakpoints.down('xs')]: {
-            left: '550px',
-            width: '200px',
-            height: '170px',
-            transition: '1s ease',
-        },
+
     },
     svgConfig: {
        width: '100%',
@@ -99,10 +72,12 @@ const WelcomeCard = () => {
                    <p className={classes.paragraphs}>15 new reports</p>
                    <p className={classes.paragraphs}>45 new programs</p>
                </div>
+
+               <div className={classes.svgWrapper}>
+                   <img className={classes.svgConfig} src={undraw} alt='imgag'/>
+               </div>
+
            </div>
-            <div className={classes.svgWrapper}>
-                <img className={classes.svgConfig} src={undraw} alt='imgag'/>
-            </div>
         </>
     )
 }
