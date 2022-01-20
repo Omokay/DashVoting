@@ -20,6 +20,10 @@ import Avenir from './static/fonts/Avenir.ttc';
 import {CssBaseline} from "@material-ui/core";
 
 import './App.css';
+import LoginPage from "./pages/authentication/login.page";
+import ResetPassword from "./pages/authentication/resetpassword.page";
+import NewPasswordReset from "./pages/authentication/newpassword.page";
+import ChangePassword from "./pages/authentication/changepassword.page";
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -76,6 +80,10 @@ function App() {
                       <Route exact path='/programs'><Programs /></Route>
                       <Route exact path='auditTrail'><AuditTrail /></Route>
                       <Route exact path='/registrations'><ClientRegistration /></Route>
+                      <Route exact path='/login'><LoginPage/></Route>
+                      <Route exact path='/forgot_password'><ResetPassword/></Route>
+                      <Route exact path='/reset_password'><NewPasswordReset/></Route>
+                      <Route exact path='/change_password'><ChangePassword/></Route>
                   </div>
               </CssBaseline>
            </ThemeProvider>

@@ -5,7 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography } from '@material-ui/core';
 
-const CheckBox = ({checked, onchange, textClick}) => {
+const CheckBox = ({text, textLink, checked, onchange, textClick}) => {
     return (
         <FormControl component='fieldset'>
             <FormGroup aria-label='position' row>
@@ -17,7 +17,7 @@ const CheckBox = ({checked, onchange, textClick}) => {
                             onChange={onchange}
                             color='primary'
                             style = {{
-                                // margin: 'auto 0',
+                                // marginBottom: '20px',
                                 //color: 'rgb(240, 124, 0)'
                             }}
                              />
@@ -26,14 +26,21 @@ const CheckBox = ({checked, onchange, textClick}) => {
                 />
                 <Typography style={{
                     color: '#9EA0A5',
-                    fontSize: '12px',
+                    fontSize: '16px',
                     marginTop: '12px',
-                }}>I agree with the <span style={{
+                    width: '390px',
+                }}>{text} <span style={{
                     cursor: 'pointer',
-                    textDecoration: 'underline',
+                    textDecoration: 'none',
                     fontWeight: 'bold',
-                    color: '#56575A'
-                }}><a href='/' onClick={textClick}>Terms of use</a></span></Typography>
+                    textSpacing: '2px',
+                    textAlign: 'center',
+                    fontSize: '16px',
+                    color: '#0C96DE'
+
+                }}><a style={{
+                    textDecoration: 'none',
+                }}href='#' onClick={textClick}>{textLink}</a></span></Typography>
             </FormGroup>
         </FormControl>
     )

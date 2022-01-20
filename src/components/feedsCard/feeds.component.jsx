@@ -35,7 +35,7 @@ const useStyles = makeStyles ((theme) => ({
     },
     wrapper: {
         minWidth: '328px',
-        height: '400px',
+        height: 'auto',
         padding: '20px 10px',
         background: '#FFFFFF',
         borderRadius: '4px',
@@ -66,7 +66,7 @@ const useStyles = makeStyles ((theme) => ({
     },
     fabWrapper: {
         position: "fixed",
-        marginTop: '-20px',
+        marginTop: '-50px',
         zIndex: 5,
     },
     floatingButton: {
@@ -95,7 +95,7 @@ const Feeds = () => {
         setArrowUp(false);
     }
 
-    // Place holder for number of items in the array
+    // Placeholder for number of items in the array
     const arr =   ['1', '2', '3', '4', '5'];
 
     const avatarBackgrounds = ['#FF007C','#7D00B5', '#39D5CF'] ;

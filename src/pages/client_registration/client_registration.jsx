@@ -10,6 +10,8 @@ import SmallSelect from "../../components/smallSelect/smallSelect.component";
 import ReplayIcon from '@material-ui/icons/Replay';
 import EditIcon from '@material-ui/icons/Edit';
 import CheckBox from "../../components/checkbox/checkBox.component";
+import CustomSelect from "../../components/customselect/customselect.component";
+import Header from "../../components/header/header.component";
 
  const useStyles = makeStyles((theme) => ({
         logo: {
@@ -80,7 +82,7 @@ import CheckBox from "../../components/checkbox/checkBox.component";
             fontSize: 'medium',
         },
         noMarg: {
-            margin: '10px 0',
+            margin: '20px 0 40px 0',
 
         },
         progressLine: {
@@ -106,7 +108,13 @@ import CheckBox from "../../components/checkbox/checkBox.component";
             height: '1px',
             alignSelf: 'center',
             backgroundColor: '#CDCDCD',
-        }
+        },
+        vertical: {
+            marginTop: '100px',
+        },
+     margLeft: {
+            marginLeft: '20px',
+     }
 }));
 
 const ClientRegistration = () => {
@@ -114,7 +122,7 @@ const ClientRegistration = () => {
 
 
     const [showStatement, setStatement] = useState(true);
-    const [viewToDisplay,  setView] = useState(5);
+    const [viewToDisplay,  setView] = useState(6);
     /**
      * Initialise state
      * */
@@ -129,15 +137,12 @@ const ClientRegistration = () => {
      * Sign in Logic
      * */
 
+
+
+
     return (
        <div className={classes.pad20}>
-           <div className='header container-fluid'>
-               <nav>
-                   <div className='nav-brand'>
-                       <a className='navbar-brand' href='/'><img className={classes.logo} src={palogo} alt='img'/></a>
-                   </div>
-               </nav>
-           </div>
+           <Header />
            {/*<ProgressStepper />*/}
 
          <>
@@ -182,11 +187,53 @@ const ClientRegistration = () => {
                          </div>
                      ) :
 
-                     // STEP 2 FOR CLIENT REGISTRATION >>>> VALIDATE PHONE NUMBER
+                     // STEP 2 FOR CLIENT REGISTRATION >>>> CONTINUE TO VALIDATE PHONE NUMBER
                      (viewToDisplay === 2) ?
                          (
                              <div className={classes.box}>
                                  <h3 className={classes.title}>Create User</h3>
+                                 <p>Fill in the registration data. You're almost there.
+                                     Enter your phone number</p>
+
+                                 {
+                                     (showStatement) ?
+                                         (<div className={classes.flex}>
+                                             <LockIcon className={classes.iconStyles}/>
+                                             <p className={classes.pad5}>We take privacy issues seriously. You can be sure that your personal
+                                                 data is securely protected</p>
+                                             <CloseIcon className={classes.iconStyles}/>
+
+                                         </div>) :
+                                         null
+                                 }
+                                 <div className={classes.padTop30}>
+                                     <p style={{
+                                         fontSize: '16px',
+                                         fontWeight: '500',
+                                         margin: '3px',
+
+                                     }}>omoke.chuku@up-ng.com</p>
+                                     <div className={classes.flex2}>
+                                         <CheckIcon className={classes.iconStyles}/>
+                                         <p style={{
+                                             color:  'secondary',
+                                         }}>Email Address Confirmed</p>
+                                     </div>
+                                 </div>
+
+                                 <div className={classes.margLeft}>
+                                     <CheckBox text='I agree with' textLink='the Terms of use of Voting solution'/>
+                                 </div>
+                                 <div className={classes.vertical}>
+                                     <CustomButton name='Continue' width='137px' />
+                                 </div>
+
+                             </div>
+                         ) :
+
+                         (viewToDisplay === 6) ? (
+                             <div className={classes.box}>
+                                 <h3 className={classes.title}>Activate User</h3>
                                  <p>Fill in the regristration data. You're almost there.
                                      Enter your phone number</p>
 
@@ -216,29 +263,30 @@ const ClientRegistration = () => {
                                      </div>
                                  </div>
 
-                                 <div>
-                                     <p className={classes.pad5} style={{
-                                         fontSize: '14px',
-                                         margin: '5px',
-                                         color: 'secondary',
+                                     <div>
+                                         <p className={classes.pad5} style={{
+                                             fontSize: '14px',
+                                             margin: '5px',
+                                             color: 'secondary',
 
-                                     }}>Enter your phone number</p>
-                                 </div>
-                                 <div className={classes.noMarg} style={{
-                                     display: 'flex',
-                                     justifyContent: 'space-between',
-                                     width: '410px',
-                                     padding: 0,
-                                 }}>
-                                     <SmallSelect width='100px'/>
-                                     <TextInput
-                                         color='secondary' label='' width='300px' type='text'/>
-                                 </div>
-                                 <div className={classes.noMarg}>
-                                     <CustomButton className={classes.noMarg} name='Send code' handleButton='' width='160px'/>
-                                 </div>
+                                         }}>Enter your phone number</p>
+                                     </div>
+                                     <div className={classes.margLeft} style={{
+                                         display: 'flex',
+                                         justifyContent: 'space-between',
+                                         width: '410px',
+                                         padding: 0,
+
+                                     }}>
+                                         <SmallSelect width='100px'/>
+                                         <TextInput
+                                             color='secondary' label='' width='300px' type='text'/>
+                                     </div>
+                                     <div className={classes.noMarg}>
+                                         <CustomButton className={classes.noMarg} name='Send code' handleButton='' width='160px'/>
+                                     </div>
                              </div>
-                         ) :
+                             ) :
                          (viewToDisplay === 3) ?
                              // STEP 3 FOR CLIENT REG >>>> SETUP ACCOUNT PASSWORD AND COMPLETE REGISTRATION
                              (
@@ -342,7 +390,7 @@ const ClientRegistration = () => {
                                          <p style={{
                                              color:  'grey',
                                              paddingTop: 0,
-                                             margingTop: 0,
+                                             marginTop: 0,
                                              alignItems: 'center',
                                              fontSize: '12px',
                                          }}>Confirm phone number with code from sms message</p></>
@@ -356,8 +404,6 @@ const ClientRegistration = () => {
                                  <div className={classes.box}>
                                      <h3 className={classes.title}>User information</h3>
                                      <p>You're almost done. Complete the process and setup a user profile</p>
-                                     <CheckBox />
-
                                      <div className={classes.noMarg}>
                                          <div style={{
                                              fontSize: '18px',
@@ -370,8 +416,12 @@ const ClientRegistration = () => {
                                          <TextInput label='First name' type='text'/>
                                          <TextInput label='Last name' type='text'/>
                                          <TextInput label='Staff ID' type='text'/>
-                                         <TextInput label='Account password' type='password'/>
-                                         <p style={{fontSize:  '10px',}}>Password must be between 6 and 12 alphanumeric characters</p>
+                                         <CustomSelect />
+                                         <div className={classes.margLeft}>
+                                             <CheckBox text='Edit/View ' textLink=' Select this to grant this user access to edit and view the system' />
+                                         </div>
+                                         {/*<TextInput label='Account password' type='password'/>*/}
+                                         {/*<p style={{fontSize:  '10px',}}>Password must be between 6 and 12 alphanumeric characters</p>*/}
                                      </div>
                                      <div className={classes.noMarg}>
                                          <CustomButton className={classes.noMarg} name='Create' handleButton='' width='160px'/>

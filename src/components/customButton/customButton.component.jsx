@@ -28,6 +28,7 @@ const CustomButton = ({name, handleButton, width}) => {
                          style={{
                             width: width,
                             padding: '10px',
+                             marginTop: '10px',
                         }}
                         variant="contained"
                         color="primary"
