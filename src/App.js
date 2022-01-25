@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route} from  'react-router-dom';
 // import {UserContext} from "./context/user_context";
 // import {VotingContext} from "./context/voting_context";
 import DashboardPA from "./pages/Dashbaord_PA/dashboard.page";
-import ClientRegistration from "./pages/client_registration/client_registration";
+import ClientRegistration from "./pages/up_registration/up_registration";
 
 import Companies from "./pages/companies/companies.pages";
 import Users from './pages/users/users.pages';

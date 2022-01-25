@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) =>
         root: {
             '& > *': {
                 margin: '20px auto',
-                minWidth: '300px',
+                minWidth: '392px',
             },
         },
         [theme.breakpoints.down('xs')]: {
@@ -28,9 +28,9 @@ const TextInput = ({value, handleChange, label, type}) => {
         <form className={classes.root} noValidate autoComplete="off">
             <TextField id="standard-basic"
                        label={label}
-                        value={value}
-                        type={type}
-                        onClick={handleChange}/>
+                       value={value}
+                       type={type}
+                       onClick={handleChange}/>
         </form>
     );
 }
