@@ -117,7 +117,7 @@ import Header from "../../components/header/header.component";
      }
 }));
 
-const ClientRegistration = () => {
+const UpRegistration = () => {
     const classes = useStyles();
 
 
@@ -234,7 +234,7 @@ const ClientRegistration = () => {
                          (viewToDisplay === 6) ? (
                              <div className={classes.box}>
                                  <h3 className={classes.title}>Activate User</h3>
-                                 <p>Fill in the regristration data. You're almost there.
+                                 <p>Fill in the registration data. You're almost there.
                                      Enter your phone number</p>
 
                                  {
@@ -434,4 +434,4 @@ const ClientRegistration = () => {
     );
 }
 
-export default ClientRegistration;
+export default UpRegistration;

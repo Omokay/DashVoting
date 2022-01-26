@@ -5,3 +5,8 @@ a{
 .nav-link  {
     text-decoration: none;
 }
+
+
+body {
+    padding: 10px 40px;
+}

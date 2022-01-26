@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route} from  'react-router-dom';
 // import {UserContext} from "./context/user_context";
 // import {VotingContext} from "./context/voting_context";
 import DashboardPA from "./pages/Dashbaord_PA/dashboard.page";
-import ClientRegistration from "./pages/up_registration/up_registration";
+import ClientRegistration from "./pages/client_registration/clientregistration.pages"
 
 import Companies from "./pages/companies/companies.pages";
 import Users from './pages/users/users.pages';
@@ -24,6 +24,7 @@ import LoginPage from "./pages/authentication/login.page";
 import ResetPassword from "./pages/authentication/resetpassword.page";
 import NewPasswordReset from "./pages/authentication/newpassword.page";
 import ChangePassword from "./pages/authentication/changepassword.page";
+import UpRegistration from "./pages/up_registration/up_registration";
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -73,17 +74,18 @@ function App() {
            <ThemeProvider theme={theme}>
               <CssBaseline>
                   <div className="App">
-                      <Route exact path='/registration'><ClientRegistration /></Route>
+                      <Route exact path='/onboarding'><ClientRegistration /></Route>
                       <Route exact path ='/'><DashboardPA/></Route>
                       <Route exact path='/users'><Users /></Route>
                       <Route exact path='/companies'><Companies /></Route>
                       <Route exact path='/programs'><Programs /></Route>
                       <Route exact path='auditTrail'><AuditTrail /></Route>
-                      <Route exact path='/registrations'><ClientRegistration /></Route>
                       <Route exact path='/login'><LoginPage/></Route>
                       <Route exact path='/forgot_password'><ResetPassword/></Route>
                       <Route exact path='/reset_password'><NewPasswordReset/></Route>
                       <Route exact path='/change_password'><ChangePassword/></Route>
+
+                      <Route exact path='/setup'><UpRegistration /></Route>
                   </div>
               </CssBaseline>
            </ThemeProvider>
