@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
+const ITEM_PADDING_TOP = 15;
 const MenuProps = {
     PaperProps: {
         style: {
@@ -46,8 +45,8 @@ export default function MultipleSelect() {
 
     return (
         <div>
-            <FormControl sx={{width: 380, margin: 0}}>
-                <InputLabel style={{margin: 0, textAlign: 'left', padding: 0}} id="demo-multiple-name-label">Options</InputLabel>
+            <FormControl sx={{width: 380, m: 0}}>
+                <InputLabel style={{margin: 0, textAlign: 'left', padding: 0}} id="demo-multiple-name-label">Show Options</InputLabel>
                 <Select
                     variant='standard'
                     labelId="demo-multiple-name-label"

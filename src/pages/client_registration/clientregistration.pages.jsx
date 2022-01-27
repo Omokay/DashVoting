@@ -3,12 +3,13 @@ import Header from "../../components/header/header.component";
 import {makeStyles} from "@material-ui/core/styles";
 import NewRegistration from "./newRegistration.page";
 import VerifyPhone from "./verifyphone.page";
-import CompanysinfoPage from "./companysinfo.page";
 import CompanyInfo from "./companysinfo.page";
 import ContactPerson from "./contactperson.page";
 import LoginInfo from "./loginInfo.page";
 import AddProgram from "../programs/addPrograms.page";
-import AddVotingPeriod from "../programs/addVotingPeriod.page";
+import AddVotingPeriod from '../programs/addVotingPeriod.page';
+import SetVotingPeriod from "../programs/setVotingPeriod.page";
+import AddContestants from "../programs/addContestants.page";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     step: {
         width: '13px',
-        height: '10px',
+        height: '13px',
         // border: '2px Solid #CDCDCD',
         backgroundColor: '#2196f3',
         borderRadius: '50%',
@@ -70,10 +71,6 @@ const ClientRegistration = () => {
                 <div className={classes.line}/>
 
                 <div className={classes.step}/>
-
-                <div className={classes.line}/>
-
-                <div className={classes.step}/>
             </div>
 
             <>
@@ -83,7 +80,9 @@ const ClientRegistration = () => {
                 {/*<ContactPerson />*/}
                 {/*<LoginInfo />*/}
                 {/*<AddProgram />*/}
-                <AddVotingPeriod />
+                {/*<AddVotingPeriod />s*/}
+                {/*<SetVotingPeriod />*/}
+                <AddContestants />
             </>
         </div>
     )
