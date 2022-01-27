@@ -416,7 +416,7 @@ const UpRegistration = () => {
                                          <TextInput label='First name' type='text'/>
                                          <TextInput label='Last name' type='text'/>
                                          <TextInput label='Staff ID' type='text'/>
-                                         <CustomSelect />
+                                         <CustomSelect minWidth='300px' label='Account Type' options={['ERM', 'IT Risk', 'Bespoke']}/>
                                          <div className={classes.margLeft}>
                                              <CheckBox text='Edit/View ' textLink=' Select this to grant this user access to edit and view the system' />
                                          </div>

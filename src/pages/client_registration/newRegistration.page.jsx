@@ -125,7 +125,13 @@ export const useStyles = makeStyles((theme) => ({
     margLeft: {
         marginLeft: '20px',
         marginTop: '10px',
-    }
+    },
+    margRight0: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '320px',
+        marginTop: '0',
+    },
 }));
 
 const NewRegistration = () => {

@@ -7,14 +7,14 @@ const useStyles = makeStyles((theme) =>
         root: {
             '& > *': {
                 margin: '20px auto',
-                minWidth: '320px',
+                minWidth: '380px',
             },
         },
         [theme.breakpoints.down('xs')]: {
             root: {
                 '& > *': {
                     margin: '20px auto',
-                    minWidth: '300px',
+                    minWidth: '380px',
                 },
             },
         },

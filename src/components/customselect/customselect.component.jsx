@@ -6,7 +6,7 @@ import Select from '@mui/material/Select';
 import styled from 'styled-components';
 import dropIcon from '../../static/images/dropicon.svg';
 
-export default function CustomSelect () {
+export default function CustomSelect ({name, minWidth, label, options}) {
     const [userType, setUserType] = React.useState('');
 
     const handleChange = (event) => {
@@ -25,22 +25,24 @@ export default function CustomSelect () {
 
     return (
         <div>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 300 }}>
-                <InputLabel id="demo-simple-select-standard-label">Account Type</InputLabel>
+            <FormControl variant="standard" sx={{ minWidth: `${minWidth}`, margin: '20px 0',}}>
+                <InputLabel style={{color: '#575F6E', opacity: '0.7'}} id="demo-simple-select-standard-label">{name}</InputLabel>
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
                     value={userType}
                     onChange={handleChange}
-                    label="Account Type"
+                    label={label}
                     IconComponent={() => <RenderIcon/>}
                 >
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>ERM</MenuItem>
-                    <MenuItem value={20}>IT Risk</MenuItem>
-                    <MenuItem value={30}>Bespoke</MenuItem>
+                    {
+                        (options && options).map((item, index) => (
+                            <MenuItem key={index} value={index}>{item}</MenuItem>
+                        ))
+                    }
                 </Select>
             </FormControl>
 

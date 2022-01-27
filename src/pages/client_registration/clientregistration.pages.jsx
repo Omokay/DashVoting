@@ -6,6 +6,9 @@ import VerifyPhone from "./verifyphone.page";
 import CompanysinfoPage from "./companysinfo.page";
 import CompanyInfo from "./companysinfo.page";
 import ContactPerson from "./contactperson.page";
+import LoginInfo from "./loginInfo.page";
+import AddProgram from "../programs/addPrograms.page";
+import AddVotingPeriod from "../programs/addVotingPeriod.page";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     step: {
         width: '13px',
-        height: '13px',
+        height: '10px',
         // border: '2px Solid #CDCDCD',
         backgroundColor: '#2196f3',
         borderRadius: '50%',
@@ -77,7 +80,10 @@ const ClientRegistration = () => {
                 {/*<NewRegistration />*/}
                 {/*<VerifyPhone />*/}
                 {/*<CompanyInfo />*/}
-                <ContactPerson />
+                {/*<ContactPerson />*/}
+                {/*<LoginInfo />*/}
+                {/*<AddProgram />*/}
+                <AddVotingPeriod />
             </>
         </div>
     )
