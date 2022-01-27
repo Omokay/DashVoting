@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {makeStyles} from "@material-ui/core/styles";
 import TextInput from "../../components/textInput/textInput.component";
 import CustomSelect from "../../components/customselect/customselect.component";
@@ -10,6 +11,9 @@ import palogo from "../../static/images/palogo.png";
 import Header from "../../components/header/header.component";
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+
+    },
     logo: {
         width: '90.41px',
         height: '26.64px',
@@ -19,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flex: {
         display: 'flex',
         justifyContent: 'space-between',
-        maxWidth: '480px',
+        maxWidth: '456px',
         height: '65px',
         [theme.breakpoints.up('xs')]: {
             height: 'auto',
@@ -33,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '12px',
     },
     box: {
-        maxWidth: '520px',
+        maxWidth: '456px',
         height: 'auto',
         paddingTop: '100px',
         margin: '0 auto',
@@ -62,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontWeight: 'bold',
+        fontSize: '32px',
     },
     noMarg: {
         margin: '20px 0 40px 0',
@@ -74,21 +79,31 @@ const useStyles = makeStyles((theme) => ({
     margRight0: {
         display: 'flex',
         justifyContent: 'flex-end',
-        width: '300px',
+        width: '392px',
         marginTop: '0',
     },
     subHeader: {
-        fontWeight: 'bolder',
+        fontWeight: 'bold',
         fontSize: '20px',
+    },
+    action: {
+        margin: '20px 0 40px 0',
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '100%',
+        alignItems: 'center',
+    },
+    signup: {
+        width: '89px',
+        height: '24px',
     }
-
 
 }));
 
 const LoginPage = () => {
     const classes = useStyles();
     return (
-        <>
+        <div className={classes.container}>
             <Header />
             <div className={classes.box}>
                 <h3 className={classes.title}>Login</h3>
@@ -104,23 +119,26 @@ const LoginPage = () => {
                 </div>
                 <div className={classes.noMarg}>
                     <div style={{
-                        fontSize: '18px',
-                        marginLeft: '3px',
-
+                        marginLeft: '15px',
                     }}>
                         <p className={classes.subHeader}>User account details</p>
                         <p style={{fontSize:  '10px',}}>Specify exactly as registered</p>
+                        <TextInput label='Username' type='text'/>
+                        <TextInput label='Password' type='password'/>
+                        <div className={classes.margRight0}>Forgot Password<strong>&nbsp;?</strong></div>
                     </div>
-                    <TextInput label='Username' type='text'/>
-                    <TextInput label='Password' type='password'/>
 
-                    <div className={classes.margRight0}>Forgot password?</div>
                 </div>
-                <div className={classes.noMarg}>
-                    <CustomButton className={classes.noMarg} name='Login' handleButton='' width='160px'/>
+                <div className={classes.action}>
+                    <CustomButton  name='Sign In' handleButton='' width='160px'/>
+                    <Link style={{display: 'flex', alignItems: 'center', justifyContent:'flex-end', textDecoration: 'none', color: '#575F6E', paddingTop: '25px', marginRight: '5px',}} to='/sign_up'>
+                        <p className={classes.signup}>
+                            Sign Up
+                        </p>
+                    </Link>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,4 +1,5 @@
 import React  from 'react';
+import './App.css';
 import {BrowserRouter as Router, Route} from  'react-router-dom';
 // import {UserContext} from "./context/user_context";
 // import {VotingContext} from "./context/voting_context";

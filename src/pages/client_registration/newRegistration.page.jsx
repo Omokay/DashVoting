@@ -50,6 +50,11 @@ export const useStyles = makeStyles((theme) => ({
 
     title: {
         fontWeight: 'bold',
+        fontSize: '32px',
+    },
+    title2: {
+        fontWeight: 'bold',
+        fontSize: '20px',
     },
     box: {
         display: 'flex',
@@ -57,6 +62,14 @@ export const useStyles = makeStyles((theme) => ({
         maxWidth: '520px',
         height: 'auto',
         paddingTop: '100px',
+        margin: '0 auto',
+    },
+    box2: {
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '520px',
+        height: 'auto',
+        paddingTop: '50px',
         margin: '0 auto',
     },
     pad5: {
@@ -111,7 +124,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     margLeft: {
         marginLeft: '20px',
-        marginTop: '40px',
+        marginTop: '10px',
     }
 }));
 

@@ -5,6 +5,7 @@ import NewRegistration from "./newRegistration.page";
 import VerifyPhone from "./verifyphone.page";
 import CompanysinfoPage from "./companysinfo.page";
 import CompanyInfo from "./companysinfo.page";
+import ContactPerson from "./contactperson.page";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -75,7 +76,8 @@ const ClientRegistration = () => {
             <>
                 {/*<NewRegistration />*/}
                 {/*<VerifyPhone />*/}
-                <CompanyInfo />
+                {/*<CompanyInfo />*/}
+                <ContactPerson />
             </>
         </div>
     )

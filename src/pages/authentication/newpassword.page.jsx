@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     margRight0: {
         display: 'flex',
         justifyContent: 'flex-end',
-        width: '300px',
+        width: '392px',
         marginTop: '0',
     },
     subHeader: {
@@ -95,7 +95,7 @@ const NewPasswordReset = () => {
                         <p style={{fontSize:  '10px',}}>Kindly ensure to view the password requirements before creating</p>
                     </div>
                     <TextInput label='New Password' type='password'/>
-                    <div className={classes.margRight0}>Password Requirement?</div>
+                    <div className={classes.margRight0}>Password Requirement &nbsp;<strong>?</strong></div>
                     <TextInput label='Confirm New Password' type='password'/>
 
                 </div>

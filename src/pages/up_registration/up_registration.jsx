@@ -292,7 +292,7 @@ const UpRegistration = () => {
                              (
                                  <div className={classes.box}>
                                      <h3 className={classes.title}>Create User</h3>
-                                     <p>Fill in the regristration data. You're almost there.
+                                     <p>Fill in the registration data. You're almost there.
                                          Enter your phone number</p>
 
                                      {

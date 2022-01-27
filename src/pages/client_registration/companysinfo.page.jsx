@@ -9,7 +9,7 @@ import CustomButton from "../../components/customButton/customButton.component";
 const CompanyInfo = () => {
     const classes = useStyles();
     return (
-        <div className={classes.box}>
+         <div className={classes.box2}>
             <h3 className={classes.title}>Company's information</h3>
             <p>Fill in the data for profile. It will take a few seconds</p>
             <div className={classes.margLeft}>
@@ -18,7 +18,7 @@ const CompanyInfo = () => {
                     marginLeft: '3px',
 
                 }}>
-                    <p className={classes.title}>Company data</p>
+                    <p className={classes.title2}>Company data</p>
                     <p style={{fontSize:  '10px',}}>Specify as is in your CAC</p>
                 </div>
                 <TextInput label='Company Name' type='text'/>
@@ -29,7 +29,7 @@ const CompanyInfo = () => {
             <div className={classes.noMarg}>
                 <CustomButton className={classes.noMarg} name='Continue' handleButton='' width='160px'/>
             </div>
-        </div>
+         </div>
     )
 }
 
