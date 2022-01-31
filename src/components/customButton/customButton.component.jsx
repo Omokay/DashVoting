@@ -19,23 +19,24 @@ const useStyles = makeStyles((theme) =>
 );
 
 
-const CustomButton = ({name, handleButton, width}) => {
+const CustomButton = ({name, handleButton, width, secondary}) => {
     const classes = useStyles();
 
     return (
         <div>
-                <Button
-                         style={{
-                            width: width,
-                            padding: '10px',
-                             marginTop: '10px',
-                        }}
-                        variant="contained"
-                        color="primary"
-                        className={classes.margin}
-                        onClick={handleButton}>
-                    {name}
-                </Button>
+            <Button
+                style={{
+                    width: width,
+                    padding: '10px',
+                    marginTop: '10px',
+                    border: 'none',
+                }}
+                variant="contained"
+                color="primary"
+                className={classes.margin}
+                onClick={handleButton}>
+                {name}
+            </Button>
         </div>
     );
 }
