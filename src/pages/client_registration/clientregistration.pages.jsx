@@ -9,6 +9,8 @@ import ContactPerson from "./contactperson.page";
 import LoginInfo from "./loginInfo.page";
 import AddProgram from "../programs/addPrograms.page";
 import AddVotingPeriod from "../programs/addVotingPeriod.page";
+import AddContestantsPage from "./addContestants.page";
+import AddContestants from "./addContestants.page";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -83,7 +85,8 @@ const ClientRegistration = () => {
                 {/*<ContactPerson />*/}
                 {/*<LoginInfo />*/}
                 {/*<AddProgram />*/}
-                <AddVotingPeriod />
+                {/*<AddVotingPeriod />*/}
+                <AddContestants />
             </>
         </div>
     )
