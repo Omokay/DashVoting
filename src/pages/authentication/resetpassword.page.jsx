@@ -93,7 +93,7 @@ const ResetPassword = () => {
                         <p  className={classes.subHeader}>User account details</p>
                         <p style={{fontSize:  '10px',}}>A link would be sent to the registered email provided below</p>
                     </div>
-                    <TextInput label='Username' type='text'/>
+                    <TextInput label='Username' type='text' width='380px'/>
                 </div>
                 <div className={classes.noMarg}>
                     <CustomButton className={classes.noMarg} name='Send Link' handleButton='' width='160px'/>

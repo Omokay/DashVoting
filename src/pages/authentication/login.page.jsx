@@ -123,8 +123,8 @@ const LoginPage = () => {
                     }}>
                         <p className={classes.subHeader}>User account details</p>
                         <p style={{fontSize:  '10px',}}>Specify exactly as registered</p>
-                        <TextInput label='Username' type='text'/>
-                        <TextInput label='Password' type='password'/>
+                        <TextInput label='Username' type='text' width='380px'/>
+                        <TextInput label='Password' type='password' width='380px'/>
                         <div className={classes.margRight0}>Forgot Password<strong>&nbsp;?</strong></div>
                     </div>
 

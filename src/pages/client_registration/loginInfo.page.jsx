@@ -22,10 +22,10 @@ const LoginInfo = () => {
                     <p className={classes.title2}>Contact Person's data</p>
                     <p style={{fontSize:  '10px',}}>Please fill in details correctly</p>
                 </div>
-                <TextInput label='Username (Email address)' type='email'/>
-                <TextInput label='New Password' type='password'/>
+                <TextInput label='Username (Email address)' type='email' width='380px'/>
+                <TextInput label='New Password' type='password' width='380px'/>
                 <div className={classes.margRight0}>Password Requirement &nbsp;<strong>?</strong></div>
-                <TextInput label='Confirm New Password' type='password'/>
+                <TextInput label='Confirm New Password' type='password' width='380px'/>
                 <div style={{width: '100%'}}>
                     <CheckBox text='I agree with the' textLink='Terms and Conditions' />
                 </div>

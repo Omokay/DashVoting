@@ -7,6 +7,7 @@ import CustomButton from "../../components/customButton/customButton.component";
 import styled from 'styled-components';
 import MultipleSelect from "../../components/multiselect/multiselect.component";
 import avatar from '../../static/images/userAvatar.svg';
+import ContestantsList from "../../components/contestantsList/contestantsList.component";
 
 const AddContestants = () => {
     const classes = useStyles();
@@ -18,26 +19,25 @@ const AddContestants = () => {
                 <div style={{
                     fontSize: '18px',
                     marginLeft: '3px',
-
                 }}>
                     <p className={classes.title2}>Contestant's data</p>
                     <p style={{fontSize:  '10px',}}>Please fill in details below correctly</p>
                 </div>
                 <div style={{
-                    width: 'auto',
+                    width: '380px',
                     display: 'flex',
-                    padding: '20px',
+                    // padding: '20px',
                     justifyContent: 'space-between',
                     alignItems: 'flex-end',
                 }}>
-                    <TextInput label='Contestant Name' type='text' />
+                    <TextInput label='Contestant Name' type='text' width='260px' />
                    <Border>
                        <AvatarContainer>
                            <Avatar src={avatar} />
                        </AvatarContainer>
                    </Border>
                 </div>
-                <TextInput label='Code Name' type='text' placeholder='OC' />
+                <TextInput label='Code Name' type='text' placeholder='OC' width='380px' />
                 <div style={{width: '380px', display: 'flex', justifyContent: 'space-between',}}>
                     <CustomDateSelect name='Start Date' label='Start Date' maxWidth='80px' />
                     <CustomDateSelect name='End Date' label='End Date' maxWidth='80px' />
@@ -47,9 +47,12 @@ const AddContestants = () => {
                         <ButtonText>Add</ButtonText>
                     </ButtonDiv>
                 </div>
+                <div style={{width: '380px', display: 'flex', justifyContent: 'space-between',}}>
+                    <ContestantsList />
+                </div>
             </div>
             <div className={classes.noMarg}>
-                <CustomButton className={classes.noMarg} name='Create Period' handleButton='' width='160px'/>
+                <CustomButton className={classes.noMarg} name='Continue' handleButton='' width='160px'/>
             </div>
         </div>
     )
@@ -71,9 +74,6 @@ const ButtonDiv = styled.div`
   transition: 0.3s ease-in;
   cursor: pointer;
   
-  
-  +
-  +
   & :hover{
     width: 151px;
     height: 48px;
@@ -98,11 +98,12 @@ const Border = styled.div`
   width: 99px;
   height: 104px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 10px;
   border: 1px solid #E2E4E5;
   padding: 20px;
+  margin-bottom: 18px;
 `;
 
 const AvatarContainer = styled.div`

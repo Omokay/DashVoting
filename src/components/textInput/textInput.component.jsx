@@ -7,26 +7,28 @@ const useStyles = makeStyles((theme) =>
         root: {
             '& > *': {
                 margin: '20px auto',
-                minWidth: '380px',
+                // minWidth: '380px',
             },
         },
         [theme.breakpoints.down('xs')]: {
             root: {
                 '& > *': {
                     margin: '20px auto',
-                    minWidth: '380px',
+                    // minWidth: '380px',
                 },
             },
         },
     }),
 );
 
-const TextInput = ({value, handleChange, label, type, placeholder}) => {
+const TextInput = ({value, handleChange, label, type, placeholder, width}) => {
     const classes = useStyles();
 
     return (
-        <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="standard-basic"
+        <form  className={classes.root} noValidate autoComplete="off">
+            <TextField style={{
+                width: `${width}`
+            }} id="standard-basic"
                        label={label}
                        value={value}
                        placeholder={placeholder}

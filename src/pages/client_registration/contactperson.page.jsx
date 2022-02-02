@@ -20,9 +20,9 @@ const ContactPerson = () => {
                     <p className={classes.title2}>Contact Person's data</p>
                     <p style={{fontSize:  '10px',}}>Please fill in the details correctly</p>
                 </div>
-                <TextInput label='Staff Name' type='text'/>
-                <TextInput label='Email Address' type='text'/>
-                <TextInput label='Staff ID' type='text'/>
+                <TextInput label='Staff Name' type='text' width='380px'/>
+                <TextInput label='Email Address' type='text' width='380px'/>
+                <TextInput label='Staff ID' type='text' width='380px'/>
 
                 {/*   phone number*/}
                 <div style={{

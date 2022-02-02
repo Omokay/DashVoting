@@ -90,10 +90,10 @@ const ChangePassword = () => {
                         <p className={classes.subHeader}>Password details</p>
                         <p style={{fontSize:  '10px',}}>Kindly ensure to view the password requirements before creating</p>
                     </div>
-                    <TextInput label='Old Password' type='password'/>
-                    <TextInput label='New Password' type='password'/>
+                    <TextInput label='Old Password' type='password' width='380px'/>
+                    <TextInput label='New Password' type='password' width='380px'/>
                     <div className={classes.margRight0}>Password Requirement?</div>
-                    <TextInput label='Confirm New Password' type='password'/>
+                    <TextInput label='Confirm New Password' type='password' width='380px'/>
 
                 </div>
                 <div className={classes.noMarg}>

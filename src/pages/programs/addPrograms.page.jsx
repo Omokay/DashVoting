@@ -21,9 +21,9 @@ const AddProgram = () => {
                     <p className={classes.title2}>Program data</p>
                     <p style={{fontSize:  '10px',}}>Please fill in details correctly</p>
                 </div>
-                <TextInput label='Program Name' type='text'/>
-                <TextInput label='Program Description' type='text'/>
-                <TextInput label='Code Name' type='text'/>
+                <TextInput label='Program Name' type='text' width='380px'/>
+                <TextInput label='Program Description' type='text' width='380px'/>
+                <TextInput label='Code Name' type='text' width='380px'/>
                 <CustomSelect name='Program Type' label='Program Type' minWidth='380px' options={['Events', 'Shows']}/>
                 <div style={{width: '380px', display: 'flex', justifyContent: 'space-between',}}>
                     <CustomDateSelect name='Start Date' label='Start Date' maxWidth='80px' />

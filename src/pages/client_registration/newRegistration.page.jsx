@@ -177,6 +177,7 @@ const NewRegistration = () => {
                 }}>
                     <SmallSelect width='100px'/>
                     <TextInput
+                        width='280px'
                         style={{marginLeft: '2px'}}
                         color='secondary' label='' type='text'/>
                 </div>

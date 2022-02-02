@@ -53,7 +53,7 @@ const VerifyPhone = () => {
                 flexWrap: 'wrap',
             }}>
                 <>
-                    <TextInput label='Confirmation code' placeholder='&nbsp;-- -- -- --' type='text' />
+                    <TextInput label='Confirmation code' placeholder='&nbsp;-- -- -- --' type='text' width='380px' />
                 </>
                 <div style={{
                     display: 'flex',

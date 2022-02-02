@@ -21,10 +21,10 @@ const CompanyInfo = () => {
                     <p className={classes.title2}>Company data</p>
                     <p style={{fontSize:  '10px',}}>Specify as is in your CAC</p>
                 </div>
-                <TextInput label='Company Name' type='text'/>
-                <TextInput label='Company Address' type='text'/>
-                <TextInput label='CAC Number' type='text'/>
-                <TextInput label='Company Email Address' type='email'/>
+                <TextInput label='Company Name' type='text' width='380px'/>
+                <TextInput label='Company Address' type='text' width='380px'/>
+                <TextInput label='CAC Number' type='text' width='380px'/>
+                <TextInput label='Company Email Address' type='email' width='380px'/>
             </div>
             <div className={classes.noMarg}>
                 <CustomButton className={classes.noMarg} name='Continue' handleButton='' width='160px'/>

@@ -179,7 +179,7 @@ const UpRegistration = () => {
                                      null
                              }
                              <div className={classes.noMarg}>
-                                 <TextInput label='Enter your email address' width='480px' type='email'/>
+                                 <TextInput label='Enter your email address' width='380px' type='email'/>
                              </div>
                              <div className={classes.noMarg}>
                                  <CustomButton className={classes.noMarg} name='Send link' handleButton='' width='160px'/>
@@ -280,7 +280,7 @@ const UpRegistration = () => {
                                      }}>
                                          <SmallSelect width='100px'/>
                                          <TextInput
-                                             color='secondary' label='' width='300px' type='text'/>
+                                             color='secondary' label='' width='270px' type='text'/>
                                      </div>
                                      <div className={classes.noMarg}>
                                          <CustomButton className={classes.noMarg} name='Send code' handleButton='' width='160px'/>
@@ -365,7 +365,7 @@ const UpRegistration = () => {
                                          flexWrap: 'wrap',
                                      }}>
                                          <>
-                                             <TextInput label='Confirmation code' type='text' />
+                                             <TextInput label='Confirmation code' type='text' width='380px' />
                                          </>
                                          <div style={{
                                              display: 'flex',
@@ -413,9 +413,9 @@ const UpRegistration = () => {
                                              <p >Personal data</p>
                                              <p style={{fontSize:  '10px',}}>Specify as is in your ID</p>
                                          </div>
-                                         <TextInput label='First name' type='text'/>
-                                         <TextInput label='Last name' type='text'/>
-                                         <TextInput label='Staff ID' type='text'/>
+                                         <TextInput label='First name' type='text' width='380px'/>
+                                         <TextInput label='Last name' type='text' width='380px'/>
+                                         <TextInput label='Staff ID' type='text' width='380px'/>
                                          <CustomSelect minWidth='300px' label='Account Type' options={['ERM', 'IT Risk', 'Bespoke']}/>
                                          <div className={classes.margLeft}>
                                              <CheckBox text='Edit/View ' textLink=' Select this to grant this user access to edit and view the system' />

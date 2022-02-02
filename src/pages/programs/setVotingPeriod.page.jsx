@@ -21,8 +21,8 @@ const SetVotingPeriod = () => {
                     <p className={classes.title2}>Voting Period</p>
                     <p style={{fontSize:  '10px',}}>Please fill in details below correctly</p>
                 </div>
-                <TextInput label='Program Name' type='text'/>
-                <TextInput label='Maximum Vote for the Period' type='text'/>
+                <TextInput label='Program Name' type='text' width='380px'/>
+                <TextInput label='Maximum Vote for the Period' type='text' width='380px'/>
                 <MultipleSelect />
                 <div style={{width: '380px', display: 'flex', justifyContent: 'space-between',}}>
                     <CustomDateSelect name='Start Date' label='Start Date' maxWidth='80px' />
