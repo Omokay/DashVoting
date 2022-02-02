@@ -1,6 +1,6 @@
 import React from 'react';
 import DashHeader from "../../components/navbar/navbar.component";
-import WelcomeCard from "../../components/welcomeCard/welcomeCard.component";
+import WelcomeCard from "../../components/welcomeCard/welcomeCard.up";
 import StatCard from "../../components/statsCard/stats.component";
 import {makeStyles} from "@material-ui/core/styles";
 import Activities from "../../components/activitiesCard/activity.component";
@@ -30,14 +30,6 @@ const DashboardPA = () => {
     return (
         <>
           <DashHeader>
-                {/*<div className={classes.root}>*/}
-                {/*    <WelcomeCard />*/}
-                {/*    <StatCard />*/}
-                {/*    <Activities />*/}
-                {/*    <CompanySummary />*/}
-                {/*    <ProgramSummary />*/}
-                {/*</div>*/}
-
               <div className='row'>
                   <div className='col-lg-9 col-md-12 col-sm-12 col-xs-12'>
                      <WelcomeCard />

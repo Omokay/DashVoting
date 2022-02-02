@@ -34,6 +34,7 @@ const AddContestants = () => {
                    <Border>
                        <AvatarContainer>
                            <Avatar src={avatar} />
+                           <AvatarSpan>attach an image</AvatarSpan>
                        </AvatarContainer>
                    </Border>
                 </div>
@@ -104,6 +105,10 @@ const Border = styled.div`
   border: 1px solid #E2E4E5;
   padding: 20px;
   margin-bottom: 18px;
+  
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const AvatarContainer = styled.div`
@@ -111,6 +116,8 @@ const AvatarContainer = styled.div`
   height: 40px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
 
@@ -123,6 +130,15 @@ const AvatarContainer = styled.div`
 const Avatar = styled.img`
   width: 100%;
   height: 100%;
+`;
+
+const AvatarSpan = styled.p`
+  width: 48px;
+  height: 25px;
+  font-size: 11px;
+  color: #B7B7B7;
+  margin: 5px auto;
+  text-align: center;
 `;
 
 

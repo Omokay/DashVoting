@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import {makeStyles} from "@material-ui/core/styles";
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -149,8 +150,10 @@ const ContestantsList = () => {
                         </div>
                         <div className={classes.tableText}>Omoke Chuku</div>
                         <div className={classes.tableText}>OC</div>
-                        <div className={classes.tableText}>
-                            {/*Icon*/}
+                        <div className={classes.tableText} style={{
+                           cursor: 'pointer',
+                        }}>
+                            <MoreVertIcon />
                         </div>
                     </div>
 
@@ -173,8 +176,10 @@ const ContestantsList = () => {
                         </div>
                         <div className={classes.tableText}>Omoke Chuku</div>
                         <div className={classes.tableText}>OC</div>
-                        <div className={classes.tableText}>
-                            {/*Icon*/}
+                        <div className={classes.tableText} style={{
+                            cursor: 'pointer',
+                        }}>
+                            <MoreVertIcon />
                         </div>
                     </div>
 
