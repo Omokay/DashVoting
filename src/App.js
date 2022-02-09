@@ -11,7 +11,7 @@ import Users from './pages/users/users.pages';
 import Programs from './pages/programs/programs.pages';
 import AuditTrail from './pages/auditTrails/audit.pages';
 
-import {createMuiTheme,
+import {createTheme,
         Theme,
         ThemeProvider
 } from "@material-ui/core/styles";
@@ -45,7 +45,7 @@ const avenir = {
 };
 
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         // primary: '#3DB2FF',
         primary: {

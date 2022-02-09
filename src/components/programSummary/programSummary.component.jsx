@@ -3,11 +3,12 @@ import {makeStyles} from "@material-ui/core/styles";
 import Avatars from '../../components/avatarGroup/avatarGroup.component';
 import FilterButton from "../filterButton/filterButton.component";
 
-const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
         minWidth: '600px',
-        height: '335px',
+        height: 'auto',
+        flex: '1',
         background: '#FFFFFF',
         padding:  '20px',
         margin: '20px 0',
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     wrapper: {
         width: '100%',
-        heigth: '100%',
+        height: '100%',
         display: 'grid',
     },
     headerDiv: {
@@ -41,9 +42,10 @@ const useStyles = makeStyles((theme) => ({
     },
     table: {
         margin: '20px 0',
-        height: 'auto',
+        height: 'max-content',
         width: '100%',
         border: 'none',
+        padding: '10px 0',
         backgroundColor: 'white',
     },
     tableHead: {

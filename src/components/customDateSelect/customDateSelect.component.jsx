@@ -1,5 +1,4 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
+import {useState} from "react";import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
@@ -17,7 +16,35 @@ export default function CustomDateSelect ({name, maxWidth, label, options}) {
         )
     }
 
+    const [day, setDay] = useState('');
+    const [month, setMonth] = useState('');
+    const [year, setYear] = useState('');
 
+
+    const handleDay = (e) => {
+        setDay(e.target.value);
+    };
+    const handleMonth = (e) => {
+        setMonth(e.target.value);
+    };
+    const handleYear = (e) => {
+        setYear(e.target.value);
+    };
+
+
+    const Months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+
+    const Days = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12',
+                   '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25',
+                    '26', '27', '28', '29', '30', '31'];
+
+    // const Days28 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12',
+    //     '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25',
+    //     '26', '27', '28', '29', '30', '31'];
+    //
+    // const Days31 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12',
+    //     '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25',
+    //     '26', '27', '28', '29', '30', '31'];
 
     return (
         <div>
@@ -32,8 +59,8 @@ export default function CustomDateSelect ({name, maxWidth, label, options}) {
                    <Select
                        labelId="demo-simple-select-standard-label"
                        id="demo-simple-select-standard"
-                       value=''
-                       onChange=''
+                       value={day}
+                       onChange={handleDay}
                        label={label}
                        IconComponent={() => <RenderIcon/>}
                    >
@@ -48,24 +75,21 @@ export default function CustomDateSelect ({name, maxWidth, label, options}) {
                    <Select
                        labelId="demo-simple-select-standard-label"
                        id="demo-simple-select-standard"
-                       value=''
-                       onChange=''
+                       value={month}
+                       onChange={handleMonth}
                        label={label}
                        IconComponent={() => <RenderIcon/>}
-                   >
-                       <MenuItem value="">
-                           <em>None</em>
-                       </MenuItem>
-                       <MenuItem value={10}>01</MenuItem>
-                       <MenuItem value={10}>01</MenuItem>
-                       <MenuItem value={10}>01</MenuItem>
-                       <MenuItem value={10}>01</MenuItem>
+                   > {
+                       ((Months && Months).map((month, index) => (
+                           <MenuItem key={index} value={month}>{month}</MenuItem>
+                       )) )
+                   }
                    </Select>
                    <Select
                        labelId="demo-simple-select-standard-label"
                        id="demo-simple-select-standard"
-                       value=''
-                       onChange=''
+                       value={year}
+                       onChange={handleYear}
                        label={label}
                        IconComponent={() => <RenderIcon/>}
                    >

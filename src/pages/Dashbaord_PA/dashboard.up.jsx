@@ -10,17 +10,7 @@ import Feeds from "../../components/feedsCard/feeds.component";
 
 
 const useStyles =  makeStyles(() => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-    },
-    left: {
 
-    },
-    right: {
-
-    },
 }));
 
 
@@ -38,9 +28,9 @@ const DashboardPA = () => {
 
                   </div>
                   <div className='col-lg-3 col-md-12 col-sm-12 col-xs-12'>
-                     <StatCard />
-                     <Activities />
-                     <Feeds />
+                      <StatCard />
+                      <Activities />
+                      <Feeds />
                   </div>
               </div>
           </DashHeader>

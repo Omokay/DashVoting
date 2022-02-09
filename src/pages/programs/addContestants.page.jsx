@@ -1,7 +1,6 @@
 import React from 'react';
 import {useStyles} from '../../pages/client_registration/newRegistration.page';
 import TextInput from "../../components/textInput/textInput.component";
-import CustomSelect from "../../components/customselect/customselect.component";
 import CustomDateSelect from "../../components/customDateSelect/customDateSelect.component";
 import CustomButton from "../../components/customButton/customButton.component";
 import styled from 'styled-components';

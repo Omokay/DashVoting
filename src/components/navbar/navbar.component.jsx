@@ -38,6 +38,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
+
     root: {
         display: 'flex',
 
@@ -91,9 +92,9 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         flexGrow: 1,
+        width: '100%',
         padding: theme.spacing(3),
-        backgroundColor: '#F5F6F9',
-        minHeight: '100vh',
+        minHeight: '100%',
     },
     nested: {
         paddingLeft: theme.spacing(4),

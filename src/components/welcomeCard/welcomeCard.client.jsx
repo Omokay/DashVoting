@@ -5,12 +5,14 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
     mainWrapper: {
-        width: '802px',
+        width: 'inherit',
+        maxWidth: '960px',
         height: '190px',
         display: 'flex',
         backgroundColor: '#ffffff',
         justifyContent: 'space-between',
-        padding: '40px 30px 20px 50px',
+        padding: '50px',
+        borderRadius: '4px',
 
         [theme.breakpoints.down('md')]: {
             width: '600px',
@@ -32,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
         height: '44px',
         fontSize: '16px',
           // color: '#575F6E',
+    },
+    action: {
+        cursor: 'pointer',
     }
 }))
 
