@@ -37,7 +37,7 @@ const AddContestants = () => {
                        </AvatarContainer>
                    </Border>
                 </div>
-                <TextInput label='Code Name' type='text' placeholder='OC' width='380px' />
+                    <TextInput label='Code Name' type='text' placeholder='OC' width='380px' />
                 <div style={{width: '380px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap',}}>
                     <CustomDateSelect name='Start Date' label='Start Date' maxWidth='80px' />
                     <CustomDateSelect name='End Date' label='End Date' maxWidth='80px' />

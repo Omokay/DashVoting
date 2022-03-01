@@ -1,12 +1,13 @@
 import React from 'react';
 import DashHeader from "../../components/navbar/navbar.component";
-import {makeStyles} from "@material-ui/core/styles";
 import CustomWelcomeCard from "../../components/welcomeCard/customCard.component";
-import ProgramTable from "../../components/programTable/programTable.component";
 import StatCard from "../../components/statsCard/stats.component";
 import Activities from "../../components/activitiesCard/activity.component";
 import Feeds from "../../components/feedsCard/feeds.component";
-import CompanyTable from "../../components/companyTable/companyTable.component";
+import {makeStyles} from "@material-ui/core/styles";
+import ProgramTable from "../../components/programTable/programTable.component";
+import ReqCards from "../../components/welcomeCard/cards.pendingRequests";
+import PendingReqTable from "../../components/pendingReqTable/pendingReq.component";
 
 
 const useStyles =  makeStyles((theme) => ({
@@ -20,21 +21,23 @@ const useStyles =  makeStyles((theme) => ({
     }
 }));
 
-const Companies = () => {
+
+const PendingRequests = () => {
     const classes = useStyles();
+
     return (
         <>
             <DashHeader>
                 <div className={classes.wrapper}>
                     <div className='row'>
-                        <div className='col-lg-9 col-md-12 col-sm-12 col-xs-12'>
+                        <div className='col-lg-10 col-md-12 col-sm-12 col-xs-12'>
                             {/*isType is add to show add user or 'view' / false to show view registrations*/}
-                            <CustomWelcomeCard name='View Pending Reg' isType='view'/>
+                            <ReqCards />
                             <div className={classes.flex}>
-                                <CompanyTable />
+                                <PendingReqTable />
                             </div>
                         </div>
-                        <div className='col-lg-3 col-md-12 col-sm-12 col-xs-12'>
+                        <div className='col-lg-2 col-md-12 col-sm-12 col-xs-12'>
                             <StatCard />
                             <Activities />
                             <Feeds />
@@ -46,4 +49,4 @@ const Companies = () => {
     )
 }
 
-export default Companies;
+export default PendingRequests;

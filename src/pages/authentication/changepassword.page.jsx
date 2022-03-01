@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     margRight0: {
         display: 'flex',
         justifyContent: 'flex-end',
-        width: '300px',
+        width: '370px',
         marginTop: '0',
     },
     subHeader: {

@@ -1,9 +1,9 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import undraw from '../../static/images/undraw.png';
 
 
-const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => ({
      root:  {
          display: 'flex',
          padding: '30px',

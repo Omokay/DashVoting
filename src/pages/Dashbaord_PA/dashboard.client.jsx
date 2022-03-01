@@ -12,7 +12,10 @@ import VotingPeriod from "../../components/votingPeriodTable/votingPeriod.compon
 
 
 const useStyles =  makeStyles(() => ({
-
+    column: {
+        display: 'flex',
+        flexDirection: 'column',
+    },
 }));
 
 
@@ -22,11 +25,14 @@ const ClientDashboard = () => {
     return (
         <>
             <DashHeader>
-                <div className='row'>
+                <div style={{
+                    maxWidth: '1200px',
+                    margin: '0',
+                }} className='row'>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
-                    }} className='col-lg-9 col-md-12 col-sm-12 col-xs-12'>
+                    }} className='col-lg-10 col-md-12 col-sm-12 col-xs-12'>
                         <WelcomeClient />
                         <HorizontalStepper />
                         <VotingPeriod />
@@ -34,7 +40,7 @@ const ClientDashboard = () => {
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
-                    }} className='col-lg-3 col-md-12 col-sm-12 col-xs-12'>
+                    }} className='col-lg-2 col-md-12 col-sm-12 col-xs-12'>
                         <StatCard />
                         <Activities />
                         <Feeds />

@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import Avatars from '../../components/avatarGroup/avatarGroup.component';
 import FilterButton from "../filterButton/filterButton.component";
 

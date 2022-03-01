@@ -7,7 +7,7 @@ import DashboardPA from "./pages/Dashbaord_PA/dashboard.up";
 import ClientRegistration from "./pages/client_registration/clientregistration.pages"
 
 import Companies from "./pages/companies/companies.pages";
-import Users from './pages/users/users.pages';
+import Users from './pages/users/users.up';
 import Programs from './pages/programs/programs.pages';
 import AuditTrail from './pages/auditTrails/audit.pages';
 
@@ -27,6 +27,9 @@ import NewPasswordReset from "./pages/authentication/newpassword.page";
 import ChangePassword from "./pages/authentication/changepassword.page";
 import UpRegistration from "./pages/up_registration/up_registration";
 import ClientDashboard from "./pages/Dashbaord_PA/dashboard.client";
+import UsersAdmin from "./pages/users/users.up";
+import UsersClient from "./pages/users/users.client";
+import PendingRequests from "./pages/pending_registrations/pending_reg.page";
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -76,18 +79,26 @@ function App() {
            <ThemeProvider theme={theme}>
               <CssBaseline>
                   <div className="App">
-                      <Route exact path='/onboarding'><ClientRegistration /></Route>
                       <Route exact path ='/'><DashboardPA/></Route>
-                      <Route exact path='/users'><Users /></Route>
+                      <Route exact path='/dashboard'><ClientDashboard /></Route>
+
+
+                      <Route exact path='/users'><UsersAdmin /></Route>
+                      <Route exact path='/users_'><UsersClient /></Route>
+
+                      <Route exact path='/onboarding'><ClientRegistration /></Route>
                       <Route exact path='/companies'><Companies /></Route>
                       <Route exact path='/programs'><Programs /></Route>
+
+                      <Route exact path='/pending_requests'><PendingRequests /></Route>
                       <Route exact path='auditTrail'><AuditTrail /></Route>
+
                       <Route exact path='/login'><LoginPage/></Route>
                       <Route exact path='/forgot_password'><ResetPassword/></Route>
                       <Route exact path='/reset_password'><NewPasswordReset/></Route>
                       <Route exact path='/change_password'><ChangePassword/></Route>
                       <Route exact path='/setup'><UpRegistration /></Route>
-                      <Route exact path='/dashboard'><ClientDashboard /></Route>
+
                   </div>
               </CssBaseline>
            </ThemeProvider>

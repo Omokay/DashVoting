@@ -1,7 +1,5 @@
 import React from 'react';
 import {useStyles} from "../../components/programSummary/programSummary.component";
-import Avatars from '../../components/avatarGroup/avatarGroup.component';
-import FilterButton from "../filterButton/filterButton.component";
 import CustomButton from "../customButton/customButton.component";
 
 

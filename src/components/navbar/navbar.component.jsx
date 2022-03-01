@@ -34,7 +34,6 @@ import Menu from "@material-ui/core/Menu";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 
-
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
         MuiListItemIconRoot :{
 
-    },
+        },
         a: {
             textDecoration: 'none',
         },
@@ -104,7 +103,12 @@ const useStyles = makeStyles((theme) => ({
         width: 'inherit',
         height: 'auto',
         textDecoration: 'none',
-        color: 'black',
+        color: '#0C96DE',
+        transition: '0.5s ease',
+
+        '&:hover': {
+            borderLeft: '5px solid #0C96DE',
+        }
     },
 
 
@@ -119,8 +123,14 @@ const useStyles = makeStyles((theme) => ({
 
 
     navText: {
-        fontSize: '1.5rem',
-        color: '#666667',
+       color: '#3a3a3a',
+       fontSize: '24px',
+       transition: '0.5s ease',
+
+        '&:hover': {
+            color: '#0C96DE',
+            fontSize: '24px',
+        }
 
     },
     iconStyles: {
@@ -183,13 +193,14 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px',
     },
     dropdown: {
-      width: '15px',
-      height: '10px',
-      '&:hover': {
-          cursor: 'pointer',
-      }
+        width: '15px',
+        height: '10px',
+        '&:hover': {
+            cursor: 'pointer',
+        }
     },
 }));
+
 
 const  DashHeader = (props, children) => {
     const { window } = props;
@@ -231,47 +242,63 @@ const  DashHeader = (props, children) => {
             <Divider />
             <List component="nav"
                   aria-labelledby="nested-list-subheader">
-                <NavLink style={{textDecoration: 'none', borderColor: '#000',}} exact className={classes.navlink}  to='/' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.listItem} style={{textDecoration: 'none',}} button>
+                <NavLink style={{textDecoration: 'none',}}   to='/' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} style={{textDecoration: 'none',}} button>
                         <ListItemIcon><HomeIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Dashboard' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} className={classes.navlink}  to='/users' activeClassName={classes.activeLink}>
+                <NavLink style={{textDecoration: 'none',}}  to='/users' activeClassName={classes.activeLink}>
                     <ListItem className={classes.navlink} button>
                         <ListItemIcon><img className={classes.iconStyles2} src={userIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Users' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/companies' activeClassName={classes.activeLink}>
-                    <ListItem button>
+
+                <NavLink style={{textDecoration: 'none',}} to='/companies' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
                         <ListItemIcon><img className={classes.iconStyles2} src={compIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Companies' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/programs' activeClassName={classes.activeLink}>
-                    <ListItem button>
+                <NavLink style={{textDecoration: 'none',}} to='/programs' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
                         <ListItemIcon><img className={classes.iconStyles2} src={programIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Programs' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/registrations' activeClassName={classes.activeLink}>
-                    <ListItem button>
+                <NavLink style={{textDecoration: 'none',}} to='/pending_requests' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
                         <ListItemIcon><InfoOutlinedIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Registration' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-               <NavLink style={{textDecoration: 'none',}} className={classes.navlink} to='/' activeClassName={classes.activeLink}>
-                   <ListItem button>
+               <NavLink style={{textDecoration: 'none',}} to='/' activeClassName={classes.activeLink}>
+                   <ListItem className={classes.navlink} button>
                        <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                        <ListItemText primary='Audit Trail' className={classes.navText} />
                    </ListItem>
                </NavLink>
+
+                <NavLink style={{textDecoration: 'none',}} to='/change_password' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
+                        <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
+                        <ListItemText primary='Change Password' className={classes.navText} />
+                    </ListItem>
+                </NavLink>
+
+                <NavLink style={{textDecoration: 'none',}} to='/settings' activeClassName={classes.activeLink}>
+                    <ListItem className={classes.navlink} button>
+                        <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
+                        <ListItemText primary='Settings' className={classes.navText} />
+                    </ListItem>
+                </NavLink>
+
             </List>
 
         </div>
@@ -388,5 +415,8 @@ const  DashHeader = (props, children) => {
 // DashHeader.propTypes = {
 //     window: PropTypes.func,
 // };
+
+
+
 
 export default DashHeader;

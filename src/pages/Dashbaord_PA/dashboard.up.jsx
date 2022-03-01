@@ -10,7 +10,11 @@ import Feeds from "../../components/feedsCard/feeds.component";
 
 
 const useStyles =  makeStyles(() => ({
+    wrapper: {
+        maxWidth: '1536px',
+        margin: '0 5px',
 
+    },
 }));
 
 
@@ -20,17 +24,19 @@ const DashboardPA = () => {
     return (
         <>
           <DashHeader>
-              <div className='row'>
-                  <div className='col-lg-9 col-md-12 col-sm-12 col-xs-12'>
-                     <WelcomeCard />
-                     <CompanySummary />
-                     <ProgramSummary />
+              <div className={classes.wrapper}>
+                  <div className='row'>
+                      <div className='col-lg-10 col-md-12 col-sm-12 col-xs-12'>
+                          <WelcomeCard />
+                          <CompanySummary />
+                          <ProgramSummary />
 
-                  </div>
-                  <div className='col-lg-3 col-md-12 col-sm-12 col-xs-12'>
-                      <StatCard />
-                      <Activities />
-                      <Feeds />
+                      </div>
+                      <div className='col-lg-2 col-md-12 col-sm-12 col-xs-12'>
+                          <StatCard />
+                          <Activities />
+                          <Feeds />
+                      </div>
                   </div>
               </div>
           </DashHeader>
