@@ -6,7 +6,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     mainWrapper: {
         width: 'inherit',
-        maxWidth: '960px',
+        // maxWidth: '960px',
         height: '190px',
         display: 'flex',
         backgroundColor: '#ffffff',
@@ -46,8 +46,8 @@ const WelcomeClient = () => {
         <>
             <div className={classes.mainWrapper}>
                 <div className={classes.left}>
-                    <h2 className={classes.companyName}>Bigbrother Naija</h2>
-                    <p className={classes.companyDescription}>Multichoice Nigeria servers as the organiser of the show and is reportedly also an owner of the show</p>
+                    <h2 className={classes.companyName}>Who wants to be a millonaire?</h2>
+                    <p className={classes.companyDescription}>........</p>
                 </div>
                 <div className={classes.action}>
                     <MoreVertIcon />

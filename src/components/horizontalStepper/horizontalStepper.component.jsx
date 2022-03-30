@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
    mainWrapper: {
        width: '100%',
-       maxWidth: '960px',
+       // maxWidth: '960px',
        height: '200px',
        marginTop: '20px',
        marginBottom: '20px',

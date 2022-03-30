@@ -5,6 +5,7 @@ const VotingContextProvider = ({ children }) => {
     const [institution, setInstitution] = useState('');
     const [companies, setCompanies] = useState([]);
     const [programs, setPrograms] = useState([]);
+    const [votingPeriod, setVotingPeriod] = useState([]);
 
 
     return (
@@ -12,7 +13,8 @@ const VotingContextProvider = ({ children }) => {
             value={{
                 institution, setInstitution,
                 companies, setCompanies,
-                programs, setPrograms
+                programs, setPrograms,
+                votingPeriod, setVotingPeriod,
             }}
         >
             {children}

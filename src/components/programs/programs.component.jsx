@@ -19,7 +19,7 @@ const Programs = () => {
 
     const getPrograms = () => {
         const companyId = Math.floor(Math.random() * (3 - 1) + 1);
-        console.log(companyId);
+        // console.log(companyId);
         const url = `${baseUrl}/api/v1/companies/${companyId}/programs`;
         httpGet(url).then((res) => {
             setPrograms(res.data);

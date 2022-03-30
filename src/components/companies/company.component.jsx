@@ -28,7 +28,7 @@ const CompanyTable = () => {
     function getCompanies() {
         const url = `${baseUrl}${API.getCompanies}/?Page=${page}&PageSize=${pageSize}`;
         httpGet(url).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setCompanies(res.data);
         });
     }
