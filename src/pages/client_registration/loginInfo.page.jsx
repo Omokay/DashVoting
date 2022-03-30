@@ -24,7 +24,7 @@ const LoginInfo = () => {
                 </div>
                 <TextInput label='Username (Email address)' type='email' width='380px'/>
                 <TextInput label='New Password' type='password' width='380px'/>
-                <div className={classes.margRight0}>Password Requirement &nbsp;<strong>?</strong></div>
+                {/*<div className={classes.margRight0}>Password Requirement &nbsp;<strong>?</strong></div>*/}
                 <TextInput label='Confirm New Password' type='password' width='380px'/>
                 <div style={{width: '100%'}}>
                     <CheckBox text='I agree with the' textLink='Terms and Conditions' />

@@ -7,6 +7,7 @@ import Activities from "../../components/activitiesCard/activity.component";
 import CompanySummary from "../../components/companiesSummaryTable/companySummary.component";
 import ProgramSummary from "../../components/programSummary/programSummary.component";
 import Feeds from "../../components/feedsCard/feeds.component";
+import CustomMuiTable from "../../components/muiTable/companyTable.component";
 
 
 const useStyles =  makeStyles(() => ({
@@ -26,13 +27,12 @@ const DashboardPA = () => {
           <DashHeader>
               <div className={classes.wrapper}>
                   <div className='row'>
-                      <div className='col-lg-10 col-md-12 col-sm-12 col-xs-12'>
+                      <div className='col-lg-8 col-md-12 col-sm-12 col-xs-12'>
                           <WelcomeCard />
                           <CompanySummary />
                           <ProgramSummary />
-
                       </div>
-                      <div className='col-lg-2 col-md-12 col-sm-12 col-xs-12'>
+                      <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12'>
                           <StatCard />
                           <Activities />
                           <Feeds />

@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-export const baseUrl = '/';
+// Change before migration to production
+// export const baseUrl = 'http://192.19.8.91:2015';
+// export const baseUrl = 'http://192.168.0.111:2015';
+export const baseUrl = 'http://voting.test.payattitude.com';
+
+
 
 export const httpGet = async (url) => {
     try {

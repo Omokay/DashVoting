@@ -1,8 +1,6 @@
 import React  from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from  'react-router-dom';
-// import {UserContext} from "./context/user_context";
-// import {VotingContext} from "./context/voting_context";
 import DashboardPA from "./pages/Dashbaord_PA/dashboard.up";
 import ClientRegistration from "./pages/client_registration/clientregistration.pages"
 
@@ -30,6 +28,7 @@ import ClientDashboard from "./pages/Dashbaord_PA/dashboard.client";
 import UsersAdmin from "./pages/users/users.up";
 import UsersClient from "./pages/users/users.client";
 import PendingRequests from "./pages/pending_registrations/pending_reg.page";
+import VotingContextProvider from "./context/voting_context";
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -75,34 +74,36 @@ const theme = createTheme({
 
 function App() {
   return (
-        <Router>
-           <ThemeProvider theme={theme}>
-              <CssBaseline>
-                  <div className="App">
-                      <Route exact path ='/'><DashboardPA/></Route>
-                      <Route exact path='/dashboard'><ClientDashboard /></Route>
+      <VotingContextProvider>
+          <Router>
+              <ThemeProvider theme={theme}>
+                  <CssBaseline>
+                      <div className="App">
+                          <Route exact path ='/'><DashboardPA/></Route>
+                          <Route exact path='/dashboard'><ClientDashboard /></Route>
 
 
-                      <Route exact path='/users'><UsersAdmin /></Route>
-                      <Route exact path='/users_'><UsersClient /></Route>
+                          <Route exact path='/users'><UsersAdmin /></Route>
+                          <Route exact path='/users_'><UsersClient /></Route>
 
-                      <Route exact path='/onboarding'><ClientRegistration /></Route>
-                      <Route exact path='/companies'><Companies /></Route>
-                      <Route exact path='/programs'><Programs /></Route>
+                          <Route exact path='/onboarding'><ClientRegistration /></Route>
+                          <Route exact path='/companies'><Companies /></Route>
+                          <Route exact path='/programs'><Programs /></Route>
 
-                      <Route exact path='/pending_requests'><PendingRequests /></Route>
-                      <Route exact path='auditTrail'><AuditTrail /></Route>
+                          <Route exact path='/pending_requests'><PendingRequests /></Route>
+                          <Route exact path='auditTrail'><AuditTrail /></Route>
 
-                      <Route exact path='/login'><LoginPage/></Route>
-                      <Route exact path='/forgot_password'><ResetPassword/></Route>
-                      <Route exact path='/reset_password'><NewPasswordReset/></Route>
-                      <Route exact path='/change_password'><ChangePassword/></Route>
-                      <Route exact path='/setup'><UpRegistration /></Route>
+                          <Route exact path='/login'><LoginPage/></Route>
+                          <Route exact path='/forgot_password'><ResetPassword/></Route>
+                          <Route exact path='/reset_password'><NewPasswordReset/></Route>
+                          <Route exact path='/change_password'><ChangePassword/></Route>
+                          <Route exact path='/setup'><UpRegistration /></Route>
 
-                  </div>
-              </CssBaseline>
-           </ThemeProvider>
-        </Router>
+                      </div>
+                  </CssBaseline>
+              </ThemeProvider>
+          </Router>
+      </VotingContextProvider>
   );
 }
 

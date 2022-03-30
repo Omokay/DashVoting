@@ -8,6 +8,8 @@ import LockIcon from "@material-ui/icons/Lock";
 import CloseIcon from "@material-ui/icons/Close";
 import palogo from "../../static/images/palogo.png";
 import Header from "../../components/header/header.component";
+import {NavLink, useLocation} from 'react-router-dom';
+
 
 
 const ClientLogin = () => {
@@ -39,7 +41,9 @@ const ClientLogin = () => {
                     <TextInput label='Username' type='text'/>
                     <TextInput label='Password' type='password'/>
 
+                <NavLink style={{textDecoration: 'none', color: '#6c757d',}} to='/forgot_password'>
                     <div className={classes.margRight0}>Forgot password?</div>
+                </NavLink>
                 </div>
                 <div className={classes.noMarg}>
                     <CustomButton className={classes.noMarg} name='Login' handleButton='' width='160px'/>

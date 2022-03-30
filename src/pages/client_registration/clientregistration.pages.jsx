@@ -81,10 +81,10 @@ const ClientRegistration = () => {
                 {/*<VerifyPhone />*/}
                 {/*<CompanyInfo />*/}
                 {/*<ContactPerson />*/}
-                {/*<LoginInfo />*/}
+                <LoginInfo />
                 {/*<AddProgram />*/}
                 {/*<AddVotingPeriod />*/}
-                <AddContestants />
+                {/*<AddContestants />*/}
             </>
         </div>
     )

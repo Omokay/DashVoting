@@ -92,11 +92,10 @@ const useStyles = makeStyles((theme) => ({
     content: {
         flexGrow: 1,
         width: '100%',
-        padding: theme.spacing(3),
         minHeight: '100%',
     },
     nested: {
-        paddingLeft: theme.spacing(4),
+        // paddingLeft: theme.spacing(4),
 
     },
     navlink: {

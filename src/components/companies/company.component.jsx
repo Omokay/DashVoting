@@ -1,19 +1,61 @@
-import React, {useContext, useEffect, useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Avatars from '../../components/avatarGroup/avatarGroup.component';
+import {makeStyles} from "@material-ui/core/styles";
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import FilterButton from "../filterButton/filterButton.component";
-import CustomMuiTable from "../muiTable/companyTable.component";
-import {baseUrl, httpGet} from "../../Http_Requests/axios_requests";
-import ProgramTable from "../muiTable/programTable.component";
+import CompTable from "../muiTable/companyTable.component";
+import {useContext, useEffect, useState} from "react";
 import {VotingContext} from "../../context/voting_context";
+import {baseUrl, httpGet} from "../../Http_Requests/axios_requests";
+import API from "../../config/routes.config";
 
-export const useStyles = makeStyles((theme) => ({
+
+
+
+
+const CompanyTable = () => {
+    const classes = useStyles();
+
+    const {companies, setCompanies} = useContext(VotingContext);
+    const [page, setPage] = useState(1);
+    const [pageSize, setPagesize] = useState('');
+
+
+    useEffect(() => {
+        if (companies.length) return;
+        getCompanies();
+    }, []);
+
+
+    function getCompanies() {
+        const url = `${baseUrl}${API.getCompanies}/?Page=${page}&PageSize=${pageSize}`;
+        httpGet(url).then((res) => {
+            console.log(res.data);
+            setCompanies(res.data);
+        });
+    }
+    return (
+        <div className={classes.root}>
+            <div className={classes.headerDiv}>
+                <h1 className={classes.header}>Companies</h1>
+                <FilterButton options={['Ascending', 'Descending']} />
+            </div>
+            <div className={classes.wrapper}>
+                <CompTable rows={companies}/>
+            </div>
+        </div>
+    )
+};
+
+
+export default CompanyTable;
+
+
+const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
         minWidth: '600px',
-        height: '375px',
-        flex: '1',
+        minHeight: '700px',
         background: '#FFFFFF',
+        flex: 1,
         padding:  '20px',
         margin: '20px 0',
         transition: '1s ease',
@@ -28,7 +70,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     wrapper: {
         width: '100%',
-        height: '100%',
+        height: 'auto',
         display: 'grid',
     },
     headerDiv: {
@@ -91,43 +133,3 @@ export const useStyles = makeStyles((theme) => ({
         display: 'hidden',
     }
 }));
-
-
-const ProgramSummary = () => {
-    const classes = useStyles();
-
-    useEffect(() => {
-        getProgramSummary();
-    }, [])
-
-    const [page, setPage] = useState(1);
-    const [pageSize, setPageSize] = useState(3);
-
-    const {programs, setPrograms} = useContext(VotingContext);
-
-    const getProgramSummary = () => {
-        const companyId = 1;
-        console.log(companyId);
-        const url = `${baseUrl}/api/v1/companies/${companyId}/programs`;
-        httpGet(url).then((res) => {
-            console.log(res.data);
-            setPrograms(res.data);
-        })
-    }
-    return (
-        <>
-            <div className={classes.root}>
-                <div className={classes.headerDiv}>
-                    <h1 className={classes.header}>Program Summary</h1>
-                    <FilterButton options={['Default', 'Ascending', 'Descending']}/>
-                </div>
-                <div className={classes.wrapper}>
-                    <ProgramTable rows={programs}/>
-
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default ProgramSummary;

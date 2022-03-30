@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {makeStyles} from "@material-ui/core/styles";
 import TextInput from "../../components/textInput/textInput.component";
 import CustomSelect from "../../components/customselect/customselect.component";
@@ -125,7 +125,10 @@ const LoginPage = () => {
                         <p style={{fontSize:  '10px',}}>Specify exactly as registered</p>
                         <TextInput label='Username' type='text' width='380px'/>
                         <TextInput label='Password' type='password' width='380px'/>
-                        <div className={classes.margRight0}>Forgot Password<strong>&nbsp;?</strong></div>
+
+                        <NavLink style={{textDecoration: 'none', color: '#6c757d',}} to='/forgot_password'>
+                            <div className={classes.margRight0}>Forgot password?</div>
+                        </NavLink>
                     </div>
 
                 </div>
