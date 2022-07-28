@@ -9,7 +9,6 @@ const funcConstant = 'function';
 // month Start: new Date(new Date().getFullYear(), new Date().getMonth(), 1)
 // month End: new Date(new Date().getFullYear(), new Date().getMonth(), 1) not done
 
-
 // DATE
 (function () {
     if (typeof Date.today !== funcConstant)

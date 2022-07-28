@@ -1,7 +1,7 @@
 import React  from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from  'react-router-dom';
-import DashboardPA from "./pages/Dashbaord_PA/dashboard.up";
+import DashboardPA from "./pages/dashbaords/dashboard.up";
 import ClientRegistration from "./pages/client_registration/clientregistration.pages"
 
 import Companies from "./pages/companies/companies.pages";
@@ -24,7 +24,7 @@ import ResetPassword from "./pages/authentication/resetpassword.page";
 import NewPasswordReset from "./pages/authentication/newpassword.page";
 import ChangePassword from "./pages/authentication/changepassword.page";
 import UpRegistration from "./pages/up_registration/up_registration";
-import ClientDashboard from "./pages/Dashbaord_PA/dashboard.client";
+import ClientDashboard from "./pages/dashbaords/dashboard.client";
 import UsersAdmin from "./pages/users/users.up";
 import UsersClient from "./pages/users/users.client";
 import PendingRequests from "./pages/pending_registrations/pending_reg.page";
