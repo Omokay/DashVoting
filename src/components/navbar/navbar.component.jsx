@@ -106,7 +106,14 @@ const useStyles = makeStyles((theme) => ({
         transition: '0.5s ease',
 
         '&:hover': {
-            borderLeft: '5px solid #0C96DE',
+            '& $navText': {
+                color: '#0C96DE',
+                fontWeight: 'bold',
+            },
+            '& $gradient': {
+                backgroundImage: 'linear-gradient(to right, #0C96DE , #ffffff)',
+                opacity: '0.4',
+            },
         }
     },
 
@@ -198,6 +205,12 @@ const useStyles = makeStyles((theme) => ({
             cursor: 'pointer',
         }
     },
+    gradient: {
+        width: '40px',
+        height: '50px',
+        position: 'absolute',
+        left: 0,
+    },
 }));
 
 
@@ -241,58 +254,66 @@ const  DashHeader = (props, children) => {
             <Divider />
             <List component="nav"
                   aria-labelledby="nested-list-subheader">
-                <NavLink style={{textDecoration: 'none',}}   to='/' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} style={{textDecoration: 'none',}} button>
+                <NavLink className={classes.navlink} style={{textDecoration: 'none',}}   to='/' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem style={{textDecoration: 'none',}} button>
                         <ListItemIcon><HomeIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Dashboard' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}}  to='/users' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}}  to='/users' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={userIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Users' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
 
-                <NavLink style={{textDecoration: 'none',}} to='/companies' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/companies' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={compIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Companies' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} to='/programs' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/programs' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={programIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Programs' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} to='/pending_requests' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/pending_requests' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><InfoOutlinedIcon className={classes.iconStyles} /></ListItemIcon>
                         <ListItemText primary='Registration' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-               <NavLink style={{textDecoration: 'none',}} to='/' activeClassName={classes.activeLink}>
-                   <ListItem className={classes.navlink} button>
+               <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/' activeClassName={classes.activeLink}>
+                   <div className={classes.gradient}/>
+                   <ListItem button>
                        <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                        <ListItemText primary='Audit Trail' className={classes.navText} />
                    </ListItem>
                </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} to='/change_password' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink} style={{textDecoration: 'none',}} to='/change_password' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Change Password' className={classes.navText} />
                     </ListItem>
                 </NavLink>
 
-                <NavLink style={{textDecoration: 'none',}} to='/settings' activeClassName={classes.activeLink}>
-                    <ListItem className={classes.navlink} button>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/' activeClassName={classes.activeLink}>
+                    <div className={classes.gradient}/>
+                    <ListItem button>
                         <ListItemIcon><img className={classes.iconStyles2} src={auditIcon} alt=''/></ListItemIcon>
                         <ListItemText primary='Settings' className={classes.navText} />
                     </ListItem>

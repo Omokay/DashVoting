@@ -52,6 +52,10 @@ const useStyles = makeStyles( (theme) => ({
 
 const StatCard = () => {
     const classes = useStyles();
+
+    const getCompanyCount = () => {};
+    const registrationCount = () => {};
+    const getUsersCount = () => {};
     return  (
         <>
           <div className={classes.row}>
