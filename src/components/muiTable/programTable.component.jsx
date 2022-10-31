@@ -27,19 +27,38 @@ const ProgramTable = ({rows, isSummary}) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows && rows.map((row) => (
-                        <TableRow key={row.email}>
+                        <TableRow>
                             <StyledTableCell align="left">#</StyledTableCell>
-                            <StyledTableCell align="left">{row.name}</StyledTableCell>
-                            <StyledTableCell align="left">{row.type}</StyledTableCell>
-                            <StyledTableCell align="left">{row.fee}</StyledTableCell>
-                            <StyledTableCell align="left">{formatDate(row.created)}</StyledTableCell>
-                            <StyledTableCell align="left">{formatDate(row.end)}</StyledTableCell>
-
+                            <StyledTableCell align="left">The Voice</StyledTableCell>
+                            <StyledTableCell align="left">Show</StyledTableCell>
+                            <StyledTableCell align="left">20.53</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
                         </TableRow>
-
-
-                    ))}
+                        <TableRow>
+                            <StyledTableCell align="left">#</StyledTableCell>
+                            <StyledTableCell align="left">The Voice</StyledTableCell>
+                            <StyledTableCell align="left">Show</StyledTableCell>
+                            <StyledTableCell align="left">20.53</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                        </TableRow>
+                        <TableRow>
+                            <StyledTableCell align="left">#</StyledTableCell>
+                            <StyledTableCell align="left">The Voice</StyledTableCell>
+                            <StyledTableCell align="left">Show</StyledTableCell>
+                            <StyledTableCell align="left">20.53</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                        </TableRow>
+                        <TableRow>
+                            <StyledTableCell align="left">#</StyledTableCell>
+                            <StyledTableCell align="left">The Voice</StyledTableCell>
+                            <StyledTableCell align="left">Show</StyledTableCell>
+                            <StyledTableCell align="left">20.53</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                        </TableRow>
                 </TableBody>
             </Table>
         </TableContainer>

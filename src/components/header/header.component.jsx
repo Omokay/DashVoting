@@ -21,7 +21,7 @@ const Header = () => {
             <div className='header container-fluid'>
                 <nav>
                     <div className='nav-brand'>
-                        <a className='navbar-brand' href='/'><img className={classes.logo} src={palogo} alt='img'/></a>
+                        <a className='navbar-brand' href='/'>OJ</a>
                     </div>
                 </nav>
             </div>

@@ -29,6 +29,12 @@ import UsersAdmin from "./pages/users/users.up";
 import UsersClient from "./pages/users/users.client";
 import PendingRequests from "./pages/pending_registrations/pending_reg.page";
 import VotingContextProvider from "./context/voting_context";
+import VerifyPhone from "./pages/client_registration/verifyphone.page";
+import CompanyInfo from "./pages/client_registration/companysinfo.page";
+import ContactPerson from "./pages/client_registration/contactperson.page";
+import LoginInfo from "./pages/client_registration/loginInfo.page";
+import AddProgram from "./pages/programs/addPrograms.page";
+import AddVotingPeriod from "./pages/programs/addVotingPeriod.page";
 
 const avenir = {
     fontFamily: 'Avenir',
@@ -98,6 +104,14 @@ function App() {
                           <Route exact path='/reset_password'><NewPasswordReset/></Route>
                           <Route exact path='/change_password'><ChangePassword/></Route>
                           <Route exact path='/setup'><UpRegistration /></Route>
+
+
+                          <Route exact path='/verify_phone'><VerifyPhone/></Route>
+                          <Route exact path='/company_info'><CompanyInfo /></Route>
+                          <Route exact path='/contact_person'><ContactPerson /></Route>
+                          <Route exact path='/login_info'><LoginInfo/></Route>
+                          <Route exact path='/add_programs'><AddProgram/></Route>
+                          <Route exact path='/add_voting_period'><AddVotingPeriod/></Route>
 
                       </div>
                   </CssBaseline>

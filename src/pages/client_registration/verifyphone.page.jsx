@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import {useStyles} from "./newRegistration.page";
 import EditIcon from "@material-ui/icons/Edit";
 import TextInput from "../../components/textInput/textInput.component";
@@ -11,6 +12,12 @@ import CustomButton from "../../components/customButton/customButton.component";
 const VerifyPhone = () => {
     const [showStatement, setStatement] = useState(true);
     const classes = useStyles();
+    const history = useHistory();
+
+
+    function dummyRoute(){
+        history.push("/company_info");
+    }
     return (
         <div className={classes.box}>
             <h3 className={classes.title}>Verify Phone Number</h3>
@@ -76,7 +83,7 @@ const VerifyPhone = () => {
                 <p style={{color: '#575f6e'}}>Confirm phone number with code from sms message</p>
         </div>
             <div className={classes.noMarg}>
-                <CustomButton className={classes.noMarg} name='Continue' handleButton='' width='160px'/>
+                <CustomButton className={classes.noMarg} name='Continue' handleButton={dummyRoute} width='160px'/>
             </div>
         </div>
     )

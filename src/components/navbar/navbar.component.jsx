@@ -248,7 +248,14 @@ const  DashHeader = (props, children) => {
     const drawer = (
         <div>
             <div className={classes.toolbar}>
-                <img className={classes.logo} src={payAttitudeLogo} alt='Payattitude logo'/>
+                {/*<div style={{*/}
+                {/*    display: 'flex',*/}
+                {/*    // alignItems: 'center',*/}
+                {/*    justifyContent: 'center',*/}
+                {/*    fontWeight: 500,*/}
+                {/*    fontSize: '20px',*/}
+                {/*    color: 'grey',*/}
+                {/*}}>OMONIGHO</div>*/}
             </div>
 
             <Divider />
@@ -287,7 +294,7 @@ const  DashHeader = (props, children) => {
                     </ListItem>
                 </NavLink>
 
-                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/pending_requests' activeClassName={classes.activeLink}>
+                <NavLink className={classes.navlink}  style={{textDecoration: 'none',}} to='/onboarding' activeClassName={classes.activeLink}>
                     <div className={classes.gradient}/>
                     <ListItem button>
                         <ListItemIcon><InfoOutlinedIcon className={classes.iconStyles} /></ListItemIcon>

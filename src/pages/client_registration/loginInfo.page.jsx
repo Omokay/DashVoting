@@ -1,4 +1,5 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 import {useStyles} from './newRegistration.page';
 import TextInput from "../../components/textInput/textInput.component";
 import CustomButton from "../../components/customButton/customButton.component";
@@ -9,6 +10,12 @@ import CheckBox from "../../components/checkbox/checkBox.component";
 
 const LoginInfo = () => {
     const classes = useStyles();
+    const history = useHistory();
+
+    function dummyRoute() {
+        history.push('/add_programs');
+    }
+
     return (
         <div className={classes.box2}>
             <h3 className={classes.title}>Company's Login details</h3>
@@ -31,7 +38,7 @@ const LoginInfo = () => {
                 </div>
             </div>
             <div className={classes.noMarg}>
-                <CustomButton className={classes.noMarg} name='Create' handleButton='' width='160px'/>
+                <CustomButton className={classes.noMarg} name='Create' handleButton={dummyRoute} width='160px'/>
             </div>
         </div>
     )

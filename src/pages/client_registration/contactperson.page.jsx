@@ -1,4 +1,5 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 import {useStyles} from './newRegistration.page';
 import TextInput from "../../components/textInput/textInput.component";
 import CustomButton from "../../components/customButton/customButton.component";
@@ -7,6 +8,12 @@ import CustomTextInput from "../../components/textInput/customTextInput.componen
 
 const ContactPerson = () => {
     const classes = useStyles();
+    const history = useHistory();
+
+    function dummyRoute(){
+        history.push("/login_info");
+    }
+
     return (
         <div className={classes.box2}>
             <h3 className={classes.title}>Company's Contact Person</h3>
@@ -39,7 +46,7 @@ const ContactPerson = () => {
                 </div>
             </div>
             <div className={classes.noMarg}>
-                <CustomButton className={classes.noMarg} name='Continue' handleButton='' width='160px'/>
+                <CustomButton className={classes.noMarg} name='Continue' handleButton={dummyRoute} width='160px'/>
             </div>
         </div>
     )

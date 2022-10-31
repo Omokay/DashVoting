@@ -27,19 +27,40 @@ const CompTable = ({rows, isSummary}) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows && rows.map((row) => (
-                        <TableRow key={row.email}>
-                            <StyledTableCell align="left"></StyledTableCell>
-                            <StyledTableCell align="left">{row.name}</StyledTableCell>
-                            <StyledTableCell align="left">{row.email}</StyledTableCell>
-                            <StyledTableCell align="left">{row.phone}</StyledTableCell>
-                            <StyledTableCell align="left">{row.programCount}</StyledTableCell>
-                            <StyledTableCell align="left">{formatDate(row.registered)}</StyledTableCell>
+                        <TableRow>
+                            <StyledTableCell align="left">1</StyledTableCell>
+                            <StyledTableCell align="left">Omonigho Jayrush</StyledTableCell>
+                            <StyledTableCell align="left">omonigho.j@gmail.com</StyledTableCell>
+                            <StyledTableCell align="left">09050998789</StyledTableCell>
+                            <StyledTableCell align="left">4</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                        </TableRow>
+                        <TableRow>
+                            <StyledTableCell align="left">2</StyledTableCell>
+                            <StyledTableCell align="left">Ifeanyi Okoli</StyledTableCell>
+                            <StyledTableCell align="left">ifeanyi.okoli@gmail.com</StyledTableCell>
+                            <StyledTableCell align="left">09050998789</StyledTableCell>
+                            <StyledTableCell align="left">10</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
 
                         </TableRow>
+                        <TableRow>
+                            <StyledTableCell align="left">3</StyledTableCell>
+                            <StyledTableCell align="left">David Chuku</StyledTableCell>
+                            <StyledTableCell align="left">omoke.chuku@gmail.com</StyledTableCell>
+                            <StyledTableCell align="left">08105470291</StyledTableCell>
+                            <StyledTableCell align="left">7</StyledTableCell>
+                            <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
+                        </TableRow>
+                    <TableRow>
+                        <StyledTableCell align="left">4</StyledTableCell>
+                        <StyledTableCell align="left">Awonowo Michael</StyledTableCell>
+                        <StyledTableCell align="left">ayodeji.michael@gmail.com</StyledTableCell>
+                        <StyledTableCell align="left">08105470291</StyledTableCell>
+                        <StyledTableCell align="left">9</StyledTableCell>
+                        <StyledTableCell align="left">{formatDate(new Date())}</StyledTableCell>
 
-
-                    ))}
+                    </TableRow>
                 </TableBody>
             </Table>
         </TableContainer>

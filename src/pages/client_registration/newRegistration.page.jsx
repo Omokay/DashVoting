@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from "react-router-dom";
 import LockIcon from "@material-ui/icons/Lock";
 import CloseIcon from "@material-ui/icons/Close";
 import CheckIcon from "@material-ui/icons/Check";
@@ -136,8 +137,13 @@ export const useStyles = makeStyles((theme) => ({
 
 const NewRegistration = () => {
     const classes = useStyles();
+    const history = useHistory();
 
     const [showStatement, setShow] = useState(true);
+
+    function dummyRoute(){
+        history.push("/verify_phone");
+    }
     return (
         <div>
             <div className={classes.box}>
@@ -182,7 +188,7 @@ const NewRegistration = () => {
                         color='secondary' label='' type='text'/>
                 </div>
                 <div className={classes.noMarg}>
-                    <CustomButton className={classes.noMarg} name='Send code' handleButton='' width='160px'/>
+                        <CustomButton className={classes.noMarg} name='Send code' handleButton={dummyRoute} width='160px'/>
                 </div>
             </div>
         </div>
