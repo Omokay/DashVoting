@@ -85,7 +85,7 @@ function App() {
               <ThemeProvider theme={theme}>
                   <CssBaseline>
                       <div className="App">
-                          <Route exact path ='/'><DashboardPA/></Route>
+                          <Route path ='/'><DashboardPA/></Route>
                           <Route exact path='/dashboard'><ClientDashboard /></Route>
 
 
