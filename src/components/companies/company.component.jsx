@@ -14,24 +14,24 @@ import API from "../../config/routes.config";
 const CompanyTable = () => {
     const classes = useStyles();
 
-    const {companies, setCompanies} = useContext(VotingContext);
+    // const {companies, setCompanies} = useContext(VotingContext);
     const [page, setPage] = useState(1);
     const [pageSize, setPagesize] = useState('');
 
-
-    useEffect(() => {
-        if (companies.length) return;
-        getCompanies();
-    }, []);
-
-
-    function getCompanies() {
-        const url = `${baseUrl}${API.getCompanies}/?Page=${page}&PageSize=${pageSize}`;
-        httpGet(url).then((res) => {
-            // console.log(res.data);
-            setCompanies(res.data);
-        });
-    }
+    //
+    // useEffect(() => {
+    //     if (companies.length) return;
+    //     getCompanies();
+    // }, []);
+    //
+    //
+    // function getCompanies() {
+    //     const url = `${baseUrl}${API.getCompanies}/?Page=${page}&PageSize=${pageSize}`;
+    //     httpGet(url).then((res) => {
+    //         // console.log(res.data);
+    //         setCompanies(res.data);
+    //     });
+    // }
     return (
         <div className={classes.root}>
             <div className={classes.headerDiv}>
@@ -39,7 +39,7 @@ const CompanyTable = () => {
                 <FilterButton options={['Ascending', 'Descending']} />
             </div>
             <div className={classes.wrapper}>
-                <CompTable rows={companies}/>
+                <CompTable rows={[]}/>
             </div>
         </div>
     )

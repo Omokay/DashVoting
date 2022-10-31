@@ -9,22 +9,22 @@ import {baseUrl, httpGet} from "../../Http_Requests/axios_requests";
 const Programs = () => {
     const classes = useStyles();
 
-    const {programs, setPrograms} = useContext(VotingContext);
+    // const {programs, setPrograms} = useContext(VotingContext);
 
-    useEffect(() => {
-        if (programs.length) return;
-        getPrograms();
-    }, []);
-
-
-    const getPrograms = () => {
-        const companyId = Math.floor(Math.random() * (3 - 1) + 1);
-        // console.log(companyId);
-        const url = `${baseUrl}/api/v1/companies/${companyId}/programs`;
-        httpGet(url).then((res) => {
-            setPrograms(res.data);
-        })
-    }
+    // useEffect(() => {
+    //     if (programs.length) return;
+    //     getPrograms();
+    // }, []);
+    //
+    //
+    // const getPrograms = () => {
+    //     const companyId = Math.floor(Math.random() * (3 - 1) + 1);
+    //     // console.log(companyId);
+    //     const url = `${baseUrl}/api/v1/companies/${companyId}/programs`;
+    //     httpGet(url).then((res) => {
+    //         setPrograms(res.data);
+    //     })
+    // }
 
     return (
         <div className={classes.root}>
@@ -33,7 +33,7 @@ const Programs = () => {
                 <FilterButton options={['Ascending', 'Descending']} />
             </div>
             <div className={classes.wrapper}>
-                <ProgramTable rows={programs} />
+                <ProgramTable rows={[]} />
             </div>
         </div>
     )
